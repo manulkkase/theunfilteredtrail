@@ -482,6 +482,23 @@
                 <p class="page-subtitle">Share your travel adventures with fellow explorers</p>
             </div>
 
+            <!-- JSON 업데이트 안내 -->
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #f39c12;">
+                <h3 style="color: #856404; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    📝 Manual Update Required
+                </h3>
+                <p style="margin-bottom: 1rem;">After creating your post, you'll need to manually add it to <code>posts.json</code> for it to appear on the live website.</p>
+                <details style="margin-top: 1rem;">
+                    <summary style="cursor: pointer; font-weight: 600; color: #856404;">View Instructions</summary>
+                    <div style="margin-top: 1rem; padding-left: 1rem; border-left: 2px solid #ffeaa7;">
+                        <p><strong>1.</strong> Copy the generated post data from browser console</p>
+                        <p><strong>2.</strong> Add it to the "posts" array in <code>posts.json</code></p>
+                        <p><strong>3.</strong> Create individual post file: <code>posts/[slug].html</code></p>
+                        <p><strong>4.</strong> Upload files to your hosting platform</p>
+                    </div>
+                </details>
+            </div>
+
             <!-- 글 작성 폼 -->
             <form class="post-form" id="postForm" aria-label="New post creation form">
                 <!-- 제목 입력 -->
@@ -812,11 +829,16 @@
                 posts.unshift(postData);
                 localStorage.setItem('blogPosts', JSON.stringify(posts));
 
-                // 콘솔에도 출력
-                console.log('New post created:', postData);
-                console.log('Storage usage:', storageInfo.usage);
+                // JSON 포맷으로 상세 출력 (수동 업데이트용)
+                console.log('\n📝 POST DATA FOR MANUAL UPDATE:');
+                console.log('='.repeat(50));
+                console.log('1. Copy this JSON object:');
+                console.log(JSON.stringify(postData, null, 2));
+                console.log('\n2. Add it to posts.json "posts" array');
+                console.log('3. Create file: posts/' + postData.slug + '.html');
+                console.log('='.repeat(50));
 
-                showSuccess('Post published successfully! 🎉');
+                showSuccess('Post created! Check console for manual update instructions. 🎉');
 
                 // 2초 후 메인 페이지로 이동
                 setTimeout(() => {

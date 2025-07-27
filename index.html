@@ -215,31 +215,60 @@
     </footer>
 
     <script>
-        // localStorage에서 사용자 작성 포스트 불러오기
-        function loadAllPosts() {
-            const userPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
-            
-            // 사용자 포스트를 기본 형식으로 변환
-            const formattedUserPosts = userPosts.map(post => ({
-                id: post.id,
-                title: post.title,
-                slug: `post-${post.slug}`,
-                region: "Asia",
-                category: post.categories || [],
-                categories: post.categories || [],
-                thumb: post.images && post.images.length > 0 ? post.images[0].url : "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400",
-                excerpt: post.content.substring(0, 100) + (post.content.length > 100 ? "..." : ""),
-                publishDate: post.createdAt ? post.createdAt.split('T')[0] : new Date().toISOString().split('T')[0],
-                fullContent: post.content,
-                images: post.images || []
-            }));
+        // posts.json에서 포스트 불러오기 (정적 웹사이트용)
+        async function loadAllPosts() {
+            try {
+                const response = await fetch('posts.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load posts');
+                }
+                const data = await response.json();
+                
+                // 포스트 데이터를 표시 형식으로 변환
+                const formattedPosts = data.posts.map(post => ({
+                    id: post.id,
+                    title: post.title,
+                    slug: post.slug,
+                    region: post.region || "Asia",
+                    category: post.categories || [],
+                    categories: post.categories || [],
+                    thumb: post.images && post.images.length > 0 ? post.images[0].url : "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400",
+                    excerpt: post.excerpt || (post.content.substring(0, 100) + (post.content.length > 100 ? "..." : "")),
+                    publishDate: post.publishDate || post.createdAt.split('T')[0],
+                    fullContent: post.content,
+                    images: post.images || [],
+                    featured: post.featured || false
+                }));
 
-            return formattedUserPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+                return formattedPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+            } catch (error) {
+                console.error('Error loading posts:', error);
+                
+                // localStorage 백업 시스템 (로컬 개발용)
+                /* 
+                const userPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
+                const formattedUserPosts = userPosts.map(post => ({
+                    id: post.id,
+                    title: post.title,
+                    slug: `post-${post.slug}`,
+                    region: "Asia",
+                    category: post.categories || [],
+                    categories: post.categories || [],
+                    thumb: post.images && post.images.length > 0 ? post.images[0].url : "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400",
+                    excerpt: post.content.substring(0, 100) + (post.content.length > 100 ? "..." : ""),
+                    publishDate: post.createdAt ? post.createdAt.split('T')[0] : new Date().toISOString().split('T')[0],
+                    fullContent: post.content,
+                    images: post.images || []
+                }));
+                return formattedUserPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+                */
+                
+                return []; // 빈 배열 반환
+            }
         }
 
         // 전역 포스트 변수
         let posts = [];
-        posts = loadAllPosts();
 
         const postsGrid = document.getElementById('postsGrid');
         const searchInput = document.getElementById('searchInput');
@@ -319,11 +348,15 @@
 
         // 포스트 클릭 처리
         function handlePostClick(slug, isDefault, postId) {
-            window.location.href = `post.html?id=${postId}`;
+            // 정적 사이트: posts/[slug].html로 이동
+            window.location.href = `posts/${slug}.html`;
+            
+            // localStorage 시스템 (주석 처리)
+            // window.location.href = `post.html?id=${postId}`;
         }
 
-        function filterAndSortPosts() {
-            posts = loadAllPosts();
+        async function filterAndSortPosts() {
+            posts = await loadAllPosts();
             let filtered = [...posts];
             const searchValue = searchInput.value.toLowerCase();
             const regionValue = regionFilter.value;
@@ -521,7 +554,7 @@
             updateAdminUI();
         };
 
-        renderPosts(posts);
+        // 초기 렌더링은 DOMContentLoaded에서 처리
     </script>
 </body>
 </html>
