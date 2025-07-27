@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post | The Unfiltered Trail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 기존 블로그 디자인 시스템 유지 */
+        :root {
+            --primary: #1e3a5f;
+            --accent: #e74c3c;
+            --white: #fff;
+            --text: #2c3e50;
+            --light: #6c757d;
+            --border: #e9ecef;
+            --bg: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            padding-top: 72px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* 기존 블로그 헤더 복사 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-back {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-back:hover {
+            background-color: var(--border);
+            color: var(--primary);
+        }
+
+        /* 메인 컨텐츠 영역 */
+        main {
+            padding: 2rem 0;
+            min-height: calc(100vh - 72px);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            color: var(--light);
+            font-size: 1.1rem;
+        }
+
+        /* 글 작성 폼 */
+        .post-form {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--white);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 200px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        /* 카테고리 태그 스타일 (Pinterest 감성) */
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .category-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            background: var(--white);
+            color: var(--text);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            font-size: 0.9rem;
+        }
+
+        .category-tag:hover {
+            border-color: var(--primary);
+            background: rgba(30, 58, 95, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .category-tag.selected {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .category-tag.selected:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* 이미지 업로드 영역 */
+        .upload-area {
+            border: 3px dashed var(--border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: var(--white);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .upload-area:hover,
+        .upload-area.dragover {
+            border-color: var(--primary);
+            background: rgba(30, 58, 95, 0.02);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+
+        .upload-text {
+            color: var(--text);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-subtext {
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+
+        .file-input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Pinterest 스타일 이미지 갤러리 */
+        .image-gallery {
+            margin-top: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .image-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            break-inside: avoid;
+        }
+
+        .image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .image-info {
+            padding: 1rem;
+        }
+
+        .image-name {
+            font-size: 0.85rem;
+            color: var(--text);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .image-size {
+            font-size: 0.75rem;
+            color: var(--light);
+        }
+
+        .remove-image {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .image-card:hover .remove-image {
+            opacity: 1;
+        }
+
+        .remove-image:hover {
+            background: var(--accent);
+        }
+
+        /* 액션 버튼들 */
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--text);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* 에러 메시지 */
+        .error-message {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            color: #c53030;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* 성공 메시지 */
+        .success-message {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            color: #2f855a;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .post-form {
+                padding: 1.5rem;
+                margin: 1rem 0.5rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.75rem;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .category-tags {
+                gap: 0.5rem;
+            }
+
+            .category-tag {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            
+            .upload-area {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Pinterest 스타일 masonry 레이아웃을 위한 추가 스타일 */
+        @media (min-width: 769px) {
+            .gallery-grid {
+                column-count: 4;
+                column-gap: 1rem;
+                column-fill: balance;
+            }
+            
+            .image-card {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                column-count: 5;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .gallery-grid {
+                column-count: 6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 기존 블로그 헤더 복사 -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">The Unfiltered Trail</a>
+            <div class="nav-actions">
+                <a href="index.html#explore" class="btn-back" aria-label="Back to blog">← Back to Blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 페이지 헤더 -->
+            <div class="page-header">
+                <h1 class="page-title">Create New Post</h1>
+                <p class="page-subtitle">Share your travel adventures with fellow explorers</p>
+            </div>
+
+            <!-- 글 작성 폼 -->
+            <form class="post-form" id="postForm" aria-label="New post creation form">
+                <!-- 제목 입력 -->
+                <div class="form-group">
+                    <label for="postTitle" class="form-label">Post Title *</label>
+                    <input 
+                        type="text" 
+                        id="postTitle" 
+                        class="form-input" 
+                        placeholder="Enter your post title..."
+                        aria-required="true"
+                        maxlength="100"
+                    >
+                </div>
+
+                <!-- 카테고리 선택 -->
+                <div class="form-group">
+                    <label class="form-label">Categories</label>
+                    <div class="category-tags" role="group" aria-label="Select post categories">
+                        <div class="category-tag" data-category="K-Culture & Palaces" role="button" tabindex="0" aria-pressed="false">
+                            🏯 K-Culture & Palaces
+                        </div>
+                        <div class="category-tag" data-category="Street Food & Night Markets" role="button" tabindex="0" aria-pressed="false">
+                            🍢 Street Food & Night Markets
+                        </div>
+                        <div class="category-tag" data-category="Mountains & Rice Terraces" role="button" tabindex="0" aria-pressed="false">
+                            🏞️ Mountains & Rice Terraces
+                        </div>
+                        <div class="category-tag" data-category="Beaches, Bays & Islands" role="button" tabindex="0" aria-pressed="false">
+                            🏝️ Beaches, Bays & Islands
+                        </div>
+                        <div class="category-tag" data-category="City Vibes & Night-life" role="button" tabindex="0" aria-pressed="false">
+                            🌃 City Vibes & Night-life
+                        </div>
+                        <div class="category-tag" data-category="Budget Hacks & Transport" role="button" tabindex="0" aria-pressed="false">
+                            💸 Budget Hacks & Transport
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 이미지 업로드 -->
+                <div class="form-group">
+                    <label class="form-label">Images</label>
+                    <div class="upload-area" id="uploadArea" aria-label="Image upload area">
+                        <div class="upload-icon">📸</div>
+                        <div class="upload-text">Drag & drop images here</div>
+                        <div class="upload-subtext">or click to browse (PNG, JPG, JPEG up to 5MB each)</div>
+                        <input 
+                            type="file" 
+                            id="imageUpload" 
+                            class="file-input" 
+                            accept="image/png,image/jpg,image/jpeg" 
+                            multiple 
+                            aria-label="Select images to upload"
+                        >
+                    </div>
+
+                    <!-- Pinterest 스타일 이미지 갤러리 -->
+                    <div class="image-gallery" id="imageGallery" style="display: none;">
+                        <div class="gallery-grid" id="galleryGrid"></div>
+                    </div>
+                </div>
+
+                <!-- 본문 작성 -->
+                <div class="form-group">
+                    <label for="postContent" class="form-label">Post Content *</label>
+                    <textarea 
+                        id="postContent" 
+                        class="form-input form-textarea" 
+                        placeholder="Write your travel story here... Share your experiences, tips, and insights!"
+                        aria-required="true"
+                    ></textarea>
+                </div>
+
+                <!-- 에러/성공 메시지 -->
+                <div class="error-message" id="errorMessage" role="alert"></div>
+                <div class="success-message" id="successMessage" role="alert"></div>
+
+                <!-- 액션 버튼 -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" aria-label="Publish post">
+                        ✨ Publish Post
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="cancelBtn" aria-label="Cancel and go back">
+                        ← Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // DOM 요소들
+        const postForm = document.getElementById('postForm');
+        const postTitle = document.getElementById('postTitle');
+        const postContent = document.getElementById('postContent');
+        const categoryTags = document.querySelectorAll('.category-tag');
+        const uploadArea = document.getElementById('uploadArea');
+        const imageUpload = document.getElementById('imageUpload');
+        const imageGallery = document.getElementById('imageGallery');
+        const galleryGrid = document.getElementById('galleryGrid');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+
+        // 이미지 저장 배열
+        let uploadedImages = [];
+
+        // 카테고리 선택 기능
+        categoryTags.forEach(tag => {
+            // 클릭 이벤트
+            tag.addEventListener('click', () => {
+                toggleCategory(tag);
+            });
+
+            // 키보드 접근성
+            tag.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleCategory(tag);
+                }
+            });
+        });
+
+        function toggleCategory(tag) {
+            const isSelected = tag.classList.contains('selected');
+            tag.classList.toggle('selected');
+            tag.setAttribute('aria-pressed', !isSelected);
+        }
+
+        // 드래그 앤 드롭 기능
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = Array.from(e.dataTransfer.files);
+            handleFiles(files);
+        });
+
+        // 파일 선택 기능
+        imageUpload.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            handleFiles(files);
+        });
+
+        // 개선된 파일 처리 함수 (localStorage 용량 문제 해결)
+        async function handleFiles(files) {
+            const validFiles = files.filter(file => {
+                // 파일 타입 검증
+                if (!file.type.match(/image\/(png|jpg|jpeg)/)) {
+                    showError('Only PNG, JPG, and JPEG files are allowed.');
+                    return false;
+                }
+                // 파일 크기 검증 (2MB로 축소하여 localStorage 부담 감소)
+                if (file.size > 2 * 1024 * 1024) {
+                    showError(`${file.name} is too large. Maximum file size is 2MB.`);
+                    return false;
+                }
+                return true;
+            });
+
+            for (const file of validFiles) {
+                try {
+                    // 이미지 압축 및 최적화
+                    const compressedDataUrl = await compressImage(file);
+                    const imageData = {
+                        id: Date.now() + Math.random(),
+                        name: 'Image', // 간단한 이름으로 통일
+                        size: formatFileSize(file.size),
+                        url: compressedDataUrl,
+                        file: file
+                    };
+                    uploadedImages.push(imageData);
+                    addImageToGallery(imageData);
+                } catch (error) {
+                    showError(`Error processing image: ${error.message}`);
+                }
+            }
+
+            // 갤러리 표시
+            if (validFiles.length > 0) {
+                imageGallery.style.display = 'block';
+            }
+        }
+
+        // 이미지 압축 함수
+        function compressImage(file, quality = 0.7, maxWidth = 800) {
+            return new Promise((resolve) => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                img.onload = () => {
+                    // 이미지 크기 조정
+                    const ratio = Math.min(maxWidth / img.width, maxWidth / img.height);
+                    canvas.width = img.width * ratio;
+                    canvas.height = img.height * ratio;
+                    
+                    // 이미지 그리기
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    
+                    // 압축된 데이터 URL 반환
+                    const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
+                    resolve(compressedDataUrl);
+                };
+                
+                img.src = URL.createObjectURL(file);
+            });
+        }
+
+        // Pinterest 스타일 이미지 카드 생성
+        function addImageToGallery(imageData) {
+            const imageCard = document.createElement('div');
+            imageCard.className = 'image-card';
+            imageCard.innerHTML = `
+                <img src="${imageData.url}" alt="${imageData.name}" loading="lazy">
+                <div class="image-info">
+                    <div class="image-name">${imageData.name}</div>
+                    <div class="image-size">${imageData.size}</div>
+                </div>
+                <button class="remove-image" onclick="removeImage('${imageData.id}')" aria-label="Remove ${imageData.name}">×</button>
+                <button class="remove-image" style="left:0.5rem;background:#1e3a5f" onclick="insertImg('${imageData.url}','${imageData.name}')" title="Insert to post">📍</button>
+            `;
+            galleryGrid.appendChild(imageCard);
+        }
+
+        // 이미지 제거 함수
+        function removeImage(imageId) {
+            uploadedImages = uploadedImages.filter(img => img.id != imageId);
+            
+            // DOM에서 제거
+            const imageCards = galleryGrid.querySelectorAll('.image-card');
+            imageCards.forEach(card => {
+                const removeBtn = card.querySelector('.remove-image');
+                if (removeBtn.getAttribute('onclick').includes(imageId)) {
+                    card.remove();
+                }
+            });
+
+            // 갤러리 숨김 처리
+            if (uploadedImages.length === 0) {
+                imageGallery.style.display = 'none';
+            }
+        }
+
+        // 파일 크기 포맷팅
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
+
+        // 이미지를 텍스트 영역에 삽입
+        function insertImg(url, name) {
+            const textarea = document.getElementById('postContent');
+            const pos = textarea.selectionStart;
+            const before = textarea.value.substring(0, pos);
+            const after = textarea.value.substring(pos);
+            // 파일명을 간단히 "Image"로 변경하여 텍스트를 깔끔하게 유지
+            const imgText = `\n![Image](${url})\n`;
+            
+            textarea.value = before + imgText + after;
+            textarea.focus();
+            textarea.setSelectionRange(pos + imgText.length, pos + imgText.length);
+        }
+
+        // 폼 제출 처리
+        postForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // 입력값 검증
+            const title = postTitle.value.trim();
+            const content = postContent.value.trim();
+            const selectedCategories = Array.from(categoryTags)
+                .filter(tag => tag.classList.contains('selected'))
+                .map(tag => tag.dataset.category);
+
+            // 필수 필드 체크
+            if (!title) {
+                showError('Please enter a post title.');
+                postTitle.focus();
+                return;
+            }
+
+            if (!content) {
+                showError('Please write some content for your post.');
+                postContent.focus();
+                return;
+            }
+
+            // 게시글 데이터 생성
+            const postData = {
+                id: Date.now().toString(), // 유니크 ID 생성
+                title: title,
+                content: content,
+                categories: selectedCategories,
+                images: uploadedImages.map(img => ({
+                    name: img.name,
+                    size: img.size,
+                    url: img.url
+                })),
+                createdAt: new Date().toISOString(),
+                slug: generateSlug(title)
+            };
+
+            // localStorage에 최적화하여 저장
+            try {
+                let posts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
+                
+                // localStorage 용량 체크 및 정리
+                const storageInfo = checkStorageCapacity(postData);
+                if (!storageInfo.canSave) {
+                    showError('Storage full. Please delete some old posts to continue.');
+                    return;
+                }
+                
+                posts.unshift(postData);
+                localStorage.setItem('blogPosts', JSON.stringify(posts));
+
+                // 콘솔에도 출력
+                console.log('New post created:', postData);
+                console.log('Storage usage:', storageInfo.usage);
+
+                showSuccess('Post published successfully! 🎉');
+
+                // 2초 후 메인 페이지로 이동
+                setTimeout(() => {
+                    window.location.href = 'index.html#explore';
+                }, 2000);
+
+            } catch (error) {
+                showError('Error saving post. Please try again.');
+                console.error('Error saving post:', error);
+            }
+        });
+
+        // URL 슬러그 생성
+        function generateSlug(title) {
+            return title.toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        // localStorage 용량 체크 함수
+        function checkStorageCapacity(newPostData) {
+            const currentData = localStorage.getItem('blogPosts') || '[]';
+            const currentSize = new Blob([currentData]).size;
+            const newPostSize = new Blob([JSON.stringify(newPostData)]).size;
+            const totalSize = currentSize + newPostSize;
+            
+            // localStorage 제한은 보통 5-10MB (브라우저마다 다름)
+            const maxSize = 5 * 1024 * 1024; // 5MB
+            const usage = ((totalSize / maxSize) * 100).toFixed(1);
+            
+            return {
+                canSave: totalSize < maxSize,
+                usage: `${usage}%`,
+                currentSize: formatFileSize(currentSize),
+                newPostSize: formatFileSize(newPostSize),
+                totalSize: formatFileSize(totalSize)
+            };
+        }
+
+        // 에러 메시지 표시
+        function showError(message) {
+            hideMessages();
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            errorMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // 성공 메시지 표시
+        function showSuccess(message) {
+            hideMessages();
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // 메시지 숨김
+        function hideMessages() {
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+        }
+
+        // 취소 버튼 기능
+        cancelBtn.addEventListener('click', () => {
+            if (confirm('Are you sure you want to cancel? All unsaved changes will be lost.')) {
+                window.location.href = 'index.html#explore';
+            }
+        });
+
+        // 페이지 떠날 때 확인 (내용이 있을 경우)
+        window.addEventListener('beforeunload', (e) => {
+            if (postTitle.value.trim() || postContent.value.trim() || uploadedImages.length > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            }
+        });
+
+        // 키보드 단축키 (Ctrl+S로 저장)
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                postForm.dispatchEvent(new Event('submit'));
+            }
+        });
+
+        // 관리자 인증 확인
+        function isAdminLoggedIn() {
+            try {
+                const adminSession = JSON.parse(sessionStorage.getItem('adminSession') || '{}');
+                return adminSession.isAdmin === true;
+            } catch {
+                return sessionStorage.getItem('isAdmin') === 'true';
+            }
+        }
+
+        // 페이지 접근 권한 확인
+        function checkAdminAccess() {
+            if (!isAdminLoggedIn()) {
+                alert('⚠️ Admin access required!\n\nThis page is restricted to administrators only. Please login as admin to create posts.');
+                window.location.href = 'login.html';
+                return false;
+            }
+            return true;
+        }
+
+        // 페이지 로드 시 권한 확인
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!checkAdminAccess()) {
+                return;
+            }
+            hideMessages();
+        });
+
+        // 초기화 시 메시지 숨김
+        hideMessages();
+    </script>
+</body>
+</html>

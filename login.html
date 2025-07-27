@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | The Unfiltered Trail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 기존 블로그 디자인 시스템 유지 */
+        :root {
+            --primary: #1e3a5f;
+            --accent: #e74c3c;
+            --white: #fff;
+            --text: #2c3e50;
+            --light: #6c757d;
+            --border: #e9ecef;
+            --bg: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8ddd4 50%, #d4c4b0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            box-shadow: 0 20px 60px rgba(30, 58, 95, 0.15);
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .login-subtitle {
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+
+        .admin-badge {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--white);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+
+        .form-input.error {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--light);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-password:hover {
+            color: var(--primary);
+        }
+
+        .login-button {
+            width: 100%;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .login-button:hover:not(:disabled) {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .login-button:disabled {
+            background: var(--light);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .login-button.loading::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            margin: auto;
+            border: 2px solid transparent;
+            border-top-color: var(--white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes spin {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+
+        /* 에러/성공 메시지 */
+        .message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        .message.error {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            color: #c53030;
+        }
+
+        .message.success {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            color: #2f855a;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: var(--primary);
+        }
+
+        /* 보안 정보 */
+        .security-info {
+            background: rgba(30, 58, 95, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .security-info h4 {
+            color: var(--primary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .security-info p {
+            color: var(--light);
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 1rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 다크모드 지원 (선택사항) */
+        @media (prefers-color-scheme: dark) {
+            .security-info {
+                background: rgba(30, 58, 95, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">The Unfiltered Trail</div>
+            <div class="login-subtitle">Administrator Access</div>
+            <div class="admin-badge">🔐 Admin Panel</div>
+        </div>
+
+        <!-- 에러/성공 메시지 -->
+        <div class="message" id="messageBox" role="alert"></div>
+
+        <!-- 로그인 폼 -->
+        <form id="loginForm" aria-label="Admin login form">
+            <div class="form-group">
+                <label for="userId" class="form-label">Administrator ID</label>
+                <input 
+                    type="text" 
+                    id="userId" 
+                    class="form-input" 
+                    placeholder="Enter admin username"
+                    aria-required="true"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-toggle">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="form-input" 
+                        placeholder="Enter admin password"
+                        aria-required="true"
+                        autocomplete="current-password"
+                        required
+                    >
+                    <button 
+                        type="button" 
+                        class="toggle-password" 
+                        id="togglePassword"
+                        aria-label="Toggle password visibility"
+                    >👁️</button>
+                </div>
+            </div>
+
+            <button type="submit" class="login-button" id="loginButton">
+                🔑 Administrator Login
+            </button>
+        </form>
+
+        <!-- 보안 정보 -->
+        <div class="security-info">
+            <h4>🛡️ Security Notice</h4>
+            <p>This is a demo admin system. In production, use secure authentication methods like JWT tokens, OAuth, or proper server-side authentication.</p>
+        </div>
+
+        <!-- 뒤로가기 링크 -->
+        <div class="back-link">
+            <a href="index.html">← Back to Blog</a>
+        </div>
+    </div>
+
+    <script>
+        // DOM 요소들
+        const loginForm = document.getElementById('loginForm');
+        const userIdInput = document.getElementById('userId');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('loginButton');
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        const messageBox = document.getElementById('messageBox');
+
+        // 관리자 계정 정보 (실제 환경에서는 서버에서 관리해야 함)
+        const ADMIN_CREDENTIALS = {
+            username: 'admin',
+            password: 'blog2025!Admin', // 복잡한 비밀번호 사용
+        };
+
+        // 비밀번호 표시/숨김 토글
+        togglePasswordBtn.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePasswordBtn.textContent = type === 'password' ? '👁️' : '🙈';
+        });
+
+        // 입력 필드 에러 상태 제거
+        [userIdInput, passwordInput].forEach(input => {
+            input.addEventListener('input', () => {
+                input.classList.remove('error');
+                hideMessage();
+            });
+        });
+
+        // 로그인 폼 제출 처리
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await handleLogin();
+        });
+
+        // 엔터 키로 로그인
+        [userIdInput, passwordInput].forEach(input => {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    handleLogin();
+                }
+            });
+        });
+
+        // 로그인 처리 함수
+        async function handleLogin() {
+            const userId = userIdInput.value.trim();
+            const password = passwordInput.value;
+
+            // 입력값 검증
+            if (!userId) {
+                showError('Please enter your administrator ID.');
+                userIdInput.classList.add('error');
+                userIdInput.focus();
+                return;
+            }
+
+            if (!password) {
+                showError('Please enter your password.');
+                passwordInput.classList.add('error');
+                passwordInput.focus();
+                return;
+            }
+
+            // 로딩 상태 표시
+            setLoading(true);
+
+            // 인증 시뮬레이션 (실제 환경에서는 서버 요청)
+            try {
+                await simulateAuthRequest();
+
+                // 인증 확인
+                if (userId === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
+                    // 관리자 세션 설정
+                    setAdminSession();
+                    
+                    showSuccess('Login successful! Redirecting...');
+
+                    // 2초 후 메인 페이지로 이동
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
+
+                } else {
+                    throw new Error('Invalid credentials');
+                }
+
+            } catch (error) {
+                showError('Invalid administrator credentials. Please try again.');
+                
+                // 입력 필드 에러 표시
+                userIdInput.classList.add('error');
+                passwordInput.classList.add('error');
+                
+                // 패스워드 필드 초기화
+                passwordInput.value = '';
+                passwordInput.focus();
+
+                // 보안을 위한 지연
+                setTimeout(() => {
+                    setLoading(false);
+                }, 1000);
+                
+                return;
+            }
+
+            setLoading(false);
+        }
+
+        // 관리자 세션 설정
+        function setAdminSession() {
+            const sessionData = {
+                isAdmin: true,
+                loginTime: new Date().toISOString(),
+                username: ADMIN_CREDENTIALS.username,
+                sessionId: generateSessionId()
+            };
+
+            sessionStorage.setItem('adminSession', JSON.stringify(sessionData));
+            sessionStorage.setItem('isAdmin', 'true'); // 호환성을 위한 기존 키 유지
+        }
+
+        // 세션 ID 생성
+        function generateSessionId() {
+            return 'admin_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // 인증 요청 시뮬레이션
+        function simulateAuthRequest() {
+            return new Promise(resolve => {
+                setTimeout(resolve, 1500); // 1.5초 지연으로 실제 서버 요청처럼 보이게 함
+            });
+        }
+
+        // 로딩 상태 관리
+        function setLoading(loading) {
+            loginButton.disabled = loading;
+            loginButton.classList.toggle('loading', loading);
+            
+            if (loading) {
+                loginButton.textContent = 'Authenticating...';
+            } else {
+                loginButton.textContent = '🔑 Administrator Login';
+            }
+        }
+
+        // 메시지 표시 함수들
+        function showError(message) {
+            showMessage(message, 'error');
+        }
+
+        function showSuccess(message) {
+            showMessage(message, 'success');
+        }
+
+        function showMessage(message, type) {
+            messageBox.textContent = message;
+            messageBox.className = `message ${type}`;
+            messageBox.style.display = 'block';
+            messageBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function hideMessage() {
+            messageBox.style.display = 'none';
+        }
+
+        // 페이지 로드 시 이미 로그인된 경우 처리
+        document.addEventListener('DOMContentLoaded', () => {
+            if (isAdminLoggedIn()) {
+                showSuccess('You are already logged in as administrator.');
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+            }
+
+            // 첫 번째 입력 필드에 포커스
+            userIdInput.focus();
+        });
+
+        // 관리자 로그인 상태 확인 함수
+        function isAdminLoggedIn() {
+            try {
+                const adminSession = JSON.parse(sessionStorage.getItem('adminSession') || '{}');
+                return adminSession.isAdmin === true;
+            } catch {
+                return sessionStorage.getItem('isAdmin') === 'true';
+            }
+        }
+
+        // 보안: 개발자 도구에서 비밀번호 노출 방지
+        if (typeof console !== 'undefined') {
+            console.clear();
+            console.log('%c🔐 Admin Access Only', 'color: #e74c3c; font-size: 16px; font-weight: bold;');
+            console.log('%cUnauthorized access is prohibited.', 'color: #6c757d;');
+        }
+    </script>
+</body>
+</html>
