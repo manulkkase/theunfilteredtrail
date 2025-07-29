@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="keywords" content="travel blog, Asia travel, Seoul, Saigon, backpacker guide, Korea, Vietnam">
+    <meta name="author" content="{{ page.author | default: site.author }}">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ page.featured_image | default: '/images/Whisk_a35f7a9c81.jpg' | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ page.featured_image | default: '/images/Whisk_a35f7a9c81.jpg' | absolute_url }}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+    
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- SEO Plugin -->
+    {% seo %}
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="{{ '/' | relative_url }}" class="logo">The Unfiltered Trail</a>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ '/' | relative_url }}#home">Home</a></li>
+                <li><a href="{{ '/' | relative_url }}#posts">Posts</a></li>
+                <li><a href="{{ '/' | relative_url }}#categories">Categories</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+                <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+                <li><a href="{{ '/admin/' | relative_url }}" class="admin-link">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>The Unfiltered Trail</h4>
+                    <p>Real travel guides for Seoul and Saigon adventures. No fluff, just the good stuff.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                        <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/' | relative_url }}#categories">Categories</a></li>
+                        <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a></li>
+                        <li><a href="{{ '/terms.html' | relative_url }}">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Unfiltered Trail. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Netlify Identity Widget -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>

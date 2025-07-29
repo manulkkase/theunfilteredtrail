@@ -1,0 +1,253 @@
+---
+layout: default
+---
+
+<!-- Ad Space -->
+<div class="container">
+    <div class="ad-space header">
+        <small>Advertisement Space (728x90)</small>
+    </div>
+</div>
+
+<section id="home" class="hero" style="background-image: url('/images/Whisk_a35f7a9c81.jpg');">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Two Cities, One Story to Tell</h1>
+            <p>From Aussie backpacker to local insider—flip through my unfiltered guide to Asia's most vibrant cities.</p>
+            <div class="hero-cta">
+                <a href="#posts" class="btn btn-primary">Start Exploring</a>
+                <a href="{{ '/about.html' | relative_url }}" class="btn btn-secondary">About the Trail</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="posts" class="container">
+    <h2 class="section-title">Latest Adventures</h2>
+    <div class="filters">
+        <select id="regionFilter">
+            <option value="">All Regions</option>
+            <option value="Asia">Asia</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search posts...">
+        <select id="sortFilter">
+            <option value="date">Newest First</option>
+            <option value="title">Title A-Z</option>
+        </select>
+        <button id="clearFiltersBtn" class="btn btn-secondary" style="display:none;">Clear Filters</button>
+    </div>
+    
+    <div class="grid posts-grid" id="postsGrid">
+        {% if site.posts.size > 0 %}
+            {% for post in site.posts %}
+                <article class="card">
+                    <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
+                        {% if post.featured_image %}
+                            <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" loading="lazy" onerror="this.style.display='none'">
+                        {% else %}
+                            <img src="{{ '/images/Whisk_a35f7a9c81.jpg' | relative_url }}" alt="{{ post.title }}" loading="lazy" onerror="this.style.display='none'">
+                        {% endif %}
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Asia</span>
+                                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                            </div>
+                            <h3>{{ post.title }}</h3>
+                            <p class="card-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                            <div class="card-author">
+                                <span>👤 {{ post.author | default: site.author }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            {% endfor %}
+        {% else %}
+            <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);">
+                <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">📝</div>
+                <h3 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">No Posts Yet</h3>
+                <p style="color: var(--light); margin-bottom: 2rem;">Check back soon for amazing travel stories and guides!</p>
+                <a href="{{ '/admin/' | relative_url }}" style="
+                    background: var(--accent); 
+                    color: white; 
+                    padding: 1rem 2rem; 
+                    border-radius: 12px; 
+                    text-decoration: none; 
+                    font-weight: 600; 
+                    display: inline-block;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    ✨ Create First Post
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<section id="categories" class="container">
+    <h2 class="section-title">Explore by Category</h2>
+    <div class="grid categories-grid">
+        <div class="card category" data-category="K-Culture & Palaces">
+            <img src="{{ '/images/Whisk_e2ad5b5a05.jpg' | relative_url }}" alt="K-Culture & Palaces">
+            <div class="card-content">
+                <h3>K-Culture & Palaces</h3>
+            </div>
+        </div>
+        <div class="card category" data-category="Street Food & Night Markets">
+            <img src="{{ '/images/Whisk_eeba1b7b17.jpg' | relative_url }}" alt="Street Food & Night Markets">
+            <div class="card-content">
+                <h3>Street Food & Night Markets</h3>
+            </div>
+        </div>
+        <div class="card category" data-category="Mountains & Rice Terraces">
+            <img src="{{ '/images/Whisk_864b9cd673.jpg' | relative_url }}" alt="Mountains & Rice Terraces">
+            <div class="card-content">
+                <h3>Mountains & Rice Terraces</h3>
+            </div>
+        </div>
+        <div class="card category" data-category="Beaches, Bays & Islands">
+            <img src="{{ '/images/Whisk_fa8b5224e3.jpg' | relative_url }}" alt="Beaches, Bays & Islands">
+            <div class="card-content">
+                <h3>Beaches, Bays & Islands</h3>
+            </div>
+        </div>
+        <div class="card category" data-category="City Vibes & Night-life">
+            <img src="{{ '/images/Whisk_7a1fb52413.jpg' | relative_url }}" alt="City Vibes & Night-life">
+            <div class="card-content">
+                <h3>City Vibes & Night-life</h3>
+            </div>
+        </div>
+        <div class="card category" data-category="Budget Hacks & Transport">
+            <img src="{{ '/images/Whisk_38535193af.jpg' | relative_url }}" alt="Budget Hacks & Transport">
+            <div class="card-content">
+                <h3>Budget Hacks & Transport</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="container">
+    <h2 class="section-title">About</h2>
+    <div class="about">
+        <h3>G'day! Living between Seoul's neon maze and Saigon's motorbike-filled streets</h3>
+        <p>I became the go-to person for every Aussie mate planning their Asian escape.</p>
+        <p>For years, the same questions kept popping up in my DMs: "Where do locals actually eat?", "What's worth seeing and what's a total rip-off?", "How do I not look like a complete tourist?" After the hundredth 2am text asking for my secret spots, I figured—why not put all the good oil in one place?</p>
+        <p><strong>That's how this blog was born.</strong></p>
+        <p>Think of me as that friend who's already made all the mistakes, found all the shortcuts, and keeps a running list of places actually worth your time and dollars. Welcome to the unfiltered truth about traveling South Korea and Vietnam—straight from someone who calls both home.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ '/about.html' | relative_url }}" class="btn btn-primary">Read Full Story</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter" id="contact">
+    <div class="container">
+        <h2>Stay on the Trail</h2>
+        <p>Get the latest unfiltered guides and insider tips delivered monthly. No spam, just pure travel gold.</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="emailInput" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    // Basic filtering functionality for Jekyll
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        const regionFilter = document.getElementById('regionFilter');
+        const sortFilter = document.getElementById('sortFilter');
+        const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+        const postsGrid = document.getElementById('postsGrid');
+        const posts = Array.from(postsGrid.querySelectorAll('.card'));
+
+        function filterPosts() {
+            const searchValue = searchInput.value.toLowerCase();
+            const regionValue = regionFilter.value;
+            const sortValue = sortFilter.value;
+
+            let filteredPosts = posts.filter(post => {
+                const title = post.querySelector('h3').textContent.toLowerCase();
+                const excerpt = post.querySelector('.card-excerpt').textContent.toLowerCase();
+                const matchesSearch = !searchValue || title.includes(searchValue) || excerpt.includes(searchValue);
+                const matchesRegion = !regionValue || post.querySelector('.card-category').textContent === regionValue;
+                
+                return matchesSearch && matchesRegion;
+            });
+
+            // Sort posts
+            if (sortValue === 'title') {
+                filteredPosts.sort((a, b) => {
+                    const titleA = a.querySelector('h3').textContent;
+                    const titleB = b.querySelector('h3').textContent;
+                    return titleA.localeCompare(titleB);
+                });
+            } else if (sortValue === 'date') {
+                filteredPosts.sort((a, b) => {
+                    const dateA = new Date(a.querySelector('time').getAttribute('datetime'));
+                    const dateB = new Date(b.querySelector('time').getAttribute('datetime'));
+                    return dateB - dateA;
+                });
+            }
+
+            // Show/hide posts
+            posts.forEach(post => post.style.display = 'none');
+            filteredPosts.forEach(post => post.style.display = 'block');
+
+            // Show/hide clear button
+            const hasFilters = searchValue || regionValue;
+            clearFiltersBtn.style.display = hasFilters ? 'block' : 'none';
+        }
+
+        function clearFilters() {
+            searchInput.value = '';
+            regionFilter.value = '';
+            clearFiltersBtn.style.display = 'none';
+            posts.forEach(post => post.style.display = 'block');
+        }
+
+        searchInput.addEventListener('input', filterPosts);
+        regionFilter.addEventListener('change', filterPosts);
+        sortFilter.addEventListener('change', filterPosts);
+        clearFiltersBtn.addEventListener('click', clearFilters);
+
+        // Category filtering
+        document.querySelectorAll('.category').forEach(card => {
+            card.addEventListener('click', () => {
+                const category = card.dataset.category;
+                searchInput.value = category;
+                filterPosts();
+                document.getElementById('posts').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Newsletter form
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            try {
+                alert('Thanks for subscribing! Check your email for confirmation.');
+                document.getElementById('emailInput').value = '';
+            } catch (error) {
+                alert('Something went wrong. Please try again later.');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
+</script>
