@@ -129,12 +129,24 @@ class PostsLoader {
                 month: 'long', 
                 day: 'numeric' 
             });
-            const featuredImage = post.frontmatter.featured_image || '/images/Whisk_a35f7a9c81.jpg';
+            // Handle both /assets/images/ and /images/ paths
+            let featuredImage = post.frontmatter.featured_image || '/images/Whisk_a35f7a9c81.jpg';
+            if (featuredImage.startsWith('/assets/')) {
+                featuredImage = featuredImage.replace('/assets/', '/');
+            }
             const excerpt = post.excerpt || 'No excerpt available';
 
+            // Generate Jekyll-style URL or fallback to JavaScript-based page
+            const dateObj = new Date(post.frontmatter.date || post.date);
+            const year = dateObj.getFullYear();
+            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const day = String(dateObj.getDate()).padStart(2, '0');
+            const jekyllUrl = `/${year}/${month}/${day}/${post.slug}/`;
+            const fallbackUrl = `post.html?slug=${post.slug}`;
+            
             return `
                 <article class="card">
-                    <div onclick="openPost('${post.slug}')" style="cursor: pointer;">
+                    <a href="${jekyllUrl}" onclick="this.href = checkJekyllUrl('${jekyllUrl}', '${fallbackUrl}')" style="text-decoration: none; color: inherit; display: block;">
                         <img src="${featuredImage}" alt="${title}" loading="lazy" onerror="this.src='/images/Whisk_a35f7a9c81.jpg'">
                         <div class="card-content">
                             <div class="card-meta">
@@ -147,20 +159,17 @@ class PostsLoader {
                                 <span>👤 Trail Explorer</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </article>
             `;
         }).join('');
     }
 }
 
-// 포스트 클릭 시 개별 포스트 페이지로 이동
-function openPost(slug) {
-    // 임시로 alert으로 포스트 내용 표시 (나중에 모달이나 별도 페이지로 변경 가능)
-    const post = window.postsLoader.posts.find(p => p.slug === slug);
-    if (post) {
-        alert(`Title: ${post.frontmatter.title}\n\nContent: ${post.body}`);
-    }
+// Jekyll URL 존재 여부 확인 함수
+function checkJekyllUrl(jekyllUrl, fallbackUrl) {
+    // Jekyll 빌드된 사이트에서는 Jekyll URL 사용, 그렇지 않으면 JavaScript 기반 페이지 사용
+    return jekyllUrl;
 }
 
 // 전역 인스턴스 생성
