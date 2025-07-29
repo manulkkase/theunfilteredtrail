@@ -2,6 +2,7 @@
 layout: post
 title: why doing this to me
 date: 2025-07-29T11:13:30.966Z
+category: Beaches, Bays & Islands
 featured_image: /assets/images/Whisk_fa8b5224e3.jpg
 ---
 # 🇰🇷How to Travel from Australia to Korea Without Losing Your Mind 😮✈️
