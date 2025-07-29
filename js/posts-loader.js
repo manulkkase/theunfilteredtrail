@@ -135,13 +135,12 @@ class PostsLoader {
                 featuredImage = featuredImage.replace('/assets/', '/');
             }
             const excerpt = post.excerpt || 'No excerpt available';
-
-            // Generate Jekyll-style URL or fallback to JavaScript-based page
-            const dateObj = new Date(post.frontmatter.date || post.date);
-            const year = dateObj.getFullYear();
-            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-            const day = String(dateObj.getDate()).padStart(2, '0');
-            const jekyllUrl = `/${year}/${month}/${day}/${post.slug}/`;
+            
+            // Get category for display and linking
+            const category = post.frontmatter.category || post.frontmatter.categories || 'Uncategorized';
+            const displayCategory = Array.isArray(category) ? category[0] : category;
+            
+            // Generate post URL
             const fallbackUrl = `post.html?slug=${post.slug}`;
             
             return `
@@ -150,7 +149,7 @@ class PostsLoader {
                         <img src="${featuredImage}" alt="${title}" loading="lazy" onerror="this.src='/images/Whisk_a35f7a9c81.jpg'">
                         <div class="card-content">
                             <div class="card-meta">
-                                <span class="card-category">Asia</span>
+                                <a href="category.html?category=${encodeURIComponent(displayCategory)}" class="card-category" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">${displayCategory}</a>
                                 <time datetime="${post.frontmatter.date || post.date}">${formattedDate}</time>
                             </div>
                             <h3>${title}</h3>
@@ -163,6 +162,89 @@ class PostsLoader {
                 </article>
             `;
         }).join('');
+    }
+
+    // 카테고리별 필터링 기능
+    filterPostsByCategory(category) {
+        if (!category) return this.posts;
+        
+        return this.posts.filter(post => {
+            const postCategory = post.frontmatter.category || post.frontmatter.categories;
+            if (Array.isArray(postCategory)) {
+                return postCategory.includes(category);
+            }
+            return postCategory === category;
+        });
+    }
+
+    // 홈페이지용 필터링 및 검색 기능 개선
+    setupHomeFilters() {
+        const searchInput = document.getElementById('searchInput');
+        const regionFilter = document.getElementById('regionFilter');
+        const sortFilter = document.getElementById('sortFilter');
+        const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+        const postsGrid = document.getElementById('postsGrid');
+
+        if (!searchInput || !regionFilter || !sortFilter) return;
+
+        const applyFilters = () => {
+            const searchValue = searchInput.value.toLowerCase();
+            const categoryValue = regionFilter.value;
+            const sortValue = sortFilter.value;
+
+            let filteredPosts = [...this.posts];
+
+            // Apply category filter
+            if (categoryValue) {
+                filteredPosts = this.filterPostsByCategory(categoryValue);
+            }
+
+            // Apply search filter
+            if (searchValue) {
+                filteredPosts = filteredPosts.filter(post => {
+                    const title = (post.frontmatter.title || '').toLowerCase();
+                    const body = (post.body || '').toLowerCase();
+                    const category = (post.frontmatter.category || '').toLowerCase();
+                    return title.includes(searchValue) || body.includes(searchValue) || category.includes(searchValue);
+                });
+            }
+
+            // Apply sorting
+            if (sortValue === 'title') {
+                filteredPosts.sort((a, b) => {
+                    const titleA = a.frontmatter.title || '';
+                    const titleB = b.frontmatter.title || '';
+                    return titleA.localeCompare(titleB);
+                });
+            } else {
+                filteredPosts.sort((a, b) => new Date(b.frontmatter.date || b.date) - new Date(a.frontmatter.date || a.date));
+            }
+
+            // Show/hide clear button
+            const hasFilters = searchValue || categoryValue;
+            if (clearFiltersBtn) {
+                clearFiltersBtn.style.display = hasFilters ? 'block' : 'none';
+            }
+
+            // Render filtered posts
+            this.renderPosts(filteredPosts);
+        };
+
+        const clearFilters = () => {
+            searchInput.value = '';
+            regionFilter.value = '';
+            if (clearFiltersBtn) {
+                clearFiltersBtn.style.display = 'none';
+            }
+            this.renderPosts(this.posts);
+        };
+
+        searchInput.addEventListener('input', applyFilters);
+        regionFilter.addEventListener('change', applyFilters);
+        sortFilter.addEventListener('change', applyFilters);
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', clearFilters);
+        }
     }
 }
 
@@ -177,4 +259,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const posts = await window.postsLoader.loadAllPosts();
     console.log(`Loaded ${posts.length} posts:`, posts);
     window.postsLoader.renderPosts(posts);
+    
+    // 홈페이지에서만 필터 기능 활성화
+    if (document.getElementById('searchInput')) {
+        window.postsLoader.setupHomeFilters();
+    }
 });

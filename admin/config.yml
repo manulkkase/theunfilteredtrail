@@ -15,7 +15,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Category", name: "category", widget: "select", options: ["K-Culture & Palaces", "Street Food & Night Markets", "Mountains & Rice Terraces", "Beaches, Bays & Islands", "City Vibes & Night-life", "Budget Hacks & Transport"], required: true}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
       - {label: "Excerpt", name: "excerpt", widget: "text", required: false}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Category | The Unfiltered Trail</title>
+    <meta name="description" id="pageDescription" content="Browse posts by category from The Unfiltered Trail">
+    <meta name="keywords" content="travel blog, Asia travel, Seoul, Saigon, backpacker guide, Korea, Vietnam">
+    <meta name="author" content="Trail Explorer">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" id="ogTitle" content="Category | The Unfiltered Trail">
+    <meta property="og:description" id="ogDescription" content="Browse posts by category from The Unfiltered Trail">
+    <meta property="og:image" content="images/Whisk_a35f7a9c81.jpg">
+    <meta property="og:url" content="https://theunfilteredtrail.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitterTitle" content="Category | The Unfiltered Trail">
+    <meta name="twitter:description" id="twitterDescription" content="Browse posts by category from The Unfiltered Trail">
+    <meta name="twitter:image" content="images/Whisk_a35f7a9c81.jpg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">The Unfiltered Trail</a>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#posts">Posts</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="admin/" class="admin-link">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Loading State -->
+        <div id="loadingState" class="container" style="text-align: center; padding: 4rem 2rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">⏳</div>
+            <h2 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Loading Posts...</h2>
+            <p style="color: var(--light);">Fetching posts from GitHub...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="container" style="text-align: center; padding: 4rem 2rem; display: none;">
+            <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">❌</div>
+            <h2 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Category Not Found</h2>
+            <p style="color: var(--light); margin-bottom: 2rem;">Sorry, we couldn't find posts for this category.</p>
+            <a href="index.html" class="btn btn-primary">← Back to Home</a>
+        </div>
+
+        <!-- Category Content -->
+        <div id="categoryContent" class="container" style="display: none;">
+            <!-- Back Navigation -->
+            <div style="margin-bottom: 2rem;">
+                <a href="index.html#categories" class="btn btn-secondary" style="text-decoration: none;">
+                    ← Back to Categories
+                </a>
+            </div>
+
+            <!-- Category Header -->
+            <header class="category-header" style="margin-bottom: 3rem; text-align: center;">
+                <div id="categoryIcon" style="font-size: 4rem; margin-bottom: 1rem;">🏛️</div>
+                <h1 id="categoryTitle" style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--primary); margin-bottom: 1rem; line-height: 1.2;"></h1>
+                <p id="categoryDescription" style="color: var(--light); font-size: 1.2rem; max-width: 600px; margin: 0 auto;"></p>
+                <div id="postCount" style="margin-top: 1rem; color: var(--accent); font-weight: 600;"></div>
+            </header>
+
+            <!-- Filter and Sort Options -->
+            <div class="filters" style="margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <select id="sortFilter" style="padding: 0.5rem 1rem; border: 2px solid var(--light-bg); border-radius: 8px; background: var(--white); color: var(--text);">
+                    <option value="date">Newest First</option>
+                    <option value="title">Title A-Z</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search posts in this category..." style="flex: 1; min-width: 200px; padding: 0.5rem 1rem; border: 2px solid var(--light-bg); border-radius: 8px;">
+                <button id="clearFiltersBtn" class="btn btn-secondary" style="display: none;">Clear Search</button>
+            </div>
+
+            <!-- Posts Grid -->
+            <div class="grid posts-grid" id="postsGrid" style="margin-bottom: 3rem;">
+                <!-- Posts will be loaded here -->
+            </div>
+
+            <!-- All Categories Link -->
+            <div style="text-align: center; margin: 3rem 0;">
+                <a href="index.html#categories" class="btn btn-primary">Explore All Categories</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>The Unfiltered Trail</h4>
+                    <p>Real travel guides for Seoul and Saigon adventures. No fluff, just the good stuff.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#categories">Categories</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Unfiltered Trail. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Category Page Script -->
+    <script>
+        class CategoryPageLoader {
+            constructor() {
+                this.githubRepo = 'manulkkase/theunfilteredtrail';
+                this.postsPath = '_posts';
+                this.currentCategory = '';
+                this.allPosts = [];
+                this.filteredPosts = [];
+                
+                // Category metadata
+                this.categoryData = {
+                    'K-Culture & Palaces': {
+                        icon: '🏛️',
+                        description: 'Discover Korea\'s rich cultural heritage, historic palaces, and traditional experiences'
+                    },
+                    'Street Food & Night Markets': {
+                        icon: '🍜',
+                        description: 'Explore vibrant street food scenes and bustling night markets across Asia'
+                    },
+                    'Mountains & Rice Terraces': {
+                        icon: '⛰️',
+                        description: 'Adventure through stunning mountain landscapes and scenic rice terraces'
+                    },
+                    'Beaches, Bays & Islands': {
+                        icon: '🏖️',
+                        description: 'Find paradise in tropical beaches, hidden bays, and pristine islands'
+                    },
+                    'City Vibes & Night-life': {
+                        icon: '🌃',
+                        description: 'Experience the electric energy of Asia\'s most vibrant cities after dark'
+                    },
+                    'Budget Hacks & Transport': {
+                        icon: '💰',
+                        description: 'Smart travel tips, budget hacks, and transportation guides for savvy travelers'
+                    }
+                };
+            }
+
+            // Get category from URL parameters
+            getCategoryFromURL() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('category');
+            }
+
+            // Fetch all posts from GitHub
+            async fetchAllPosts() {
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${this.githubRepo}/contents/${this.postsPath}`);
+                    const files = await response.json();
+                    
+                    if (!Array.isArray(files)) return [];
+                    
+                    const markdownFiles = files.filter(file => file.name.endsWith('.md'));
+                    const postPromises = markdownFiles.map(file => this.fetchPostContent(file));
+                    const posts = await Promise.all(postPromises);
+                    
+                    return posts
+                        .filter(post => post !== null)
+                        .sort((a, b) => new Date(b.frontmatter.date || b.date) - new Date(a.frontmatter.date || a.date));
+                } catch (error) {
+                    console.error('Error fetching posts:', error);
+                    return [];
+                }
+            }
+
+            // Fetch individual post content
+            async fetchPostContent(file) {
+                try {
+                    const response = await fetch(`https://raw.githubusercontent.com/${this.githubRepo}/main/${this.postsPath}/${file.name}`);
+                    const content = await response.text();
+                    return this.parseMarkdown(content, file.name);
+                } catch (error) {
+                    console.error(`Error fetching ${file.name}:`, error);
+                    return null;
+                }
+            }
+
+            // Parse markdown content
+            parseMarkdown(content, filename) {
+                const lines = content.split('\n');
+                const post = {
+                    filename: filename,
+                    frontmatter: {},
+                    body: ''
+                };
+
+                let inFrontmatter = false;
+                let frontmatterEnd = 0;
+
+                // Parse frontmatter
+                if (lines[0] === '---') {
+                    inFrontmatter = true;
+                    for (let i = 1; i < lines.length; i++) {
+                        if (lines[i] === '---') {
+                            frontmatterEnd = i;
+                            break;
+                        }
+                        const line = lines[i];
+                        const colonIndex = line.indexOf(':');
+                        if (colonIndex > -1) {
+                            const key = line.substring(0, colonIndex).trim();
+                            const value = line.substring(colonIndex + 1).trim();
+                            post.frontmatter[key] = value.replace(/^["']|["']$/g, '');
+                        }
+                    }
+                }
+
+                // Parse body content
+                post.body = lines.slice(frontmatterEnd + 1).join('\n').trim();
+
+                // Extract date and slug from filename
+                const match = filename.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/);
+                if (match) {
+                    post.date = match[1];
+                    post.slug = match[2];
+                }
+
+                // Generate excerpt
+                post.excerpt = post.body.substring(0, 150) + (post.body.length > 150 ? '...' : '');
+
+                return post;
+            }
+
+            // Filter posts by category
+            filterPostsByCategory(posts, category) {
+                return posts.filter(post => {
+                    const postCategory = post.frontmatter.category || post.frontmatter.categories;
+                    if (Array.isArray(postCategory)) {
+                        return postCategory.includes(category);
+                    }
+                    return postCategory === category;
+                });
+            }
+
+            // Render posts
+            renderPosts(posts) {
+                const container = document.getElementById('postsGrid');
+                if (!container) return;
+
+                if (posts.length === 0) {
+                    container.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);">
+                            <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">📝</div>
+                            <h3 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">No Posts in This Category Yet</h3>
+                            <p style="color: var(--light); margin-bottom: 2rem;">Be the first to create a post in this category!</p>
+                            <a href="admin/" class="btn btn-primary">✨ Create Post</a>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = posts.map(post => {
+                    const title = post.frontmatter.title || 'Untitled';
+                    const date = new Date(post.frontmatter.date || post.date);
+                    const formattedDate = date.toLocaleDateString('en-AU', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    
+                    // Handle image paths
+                    let featuredImage = post.frontmatter.featured_image || '/images/Whisk_a35f7a9c81.jpg';
+                    if (featuredImage.startsWith('/assets/')) {
+                        featuredImage = featuredImage.replace('/assets/', '/');
+                    }
+                    
+                    const excerpt = post.excerpt || 'No excerpt available';
+                    const fallbackUrl = `post.html?slug=${post.slug}`;
+
+                    return `
+                        <article class="card">
+                            <a href="${fallbackUrl}" style="text-decoration: none; color: inherit; display: block;">
+                                <img src="${featuredImage}" alt="${title}" loading="lazy" onerror="this.src='/images/Whisk_a35f7a9c81.jpg'">
+                                <div class="card-content">
+                                    <div class="card-meta">
+                                        <span class="card-category">${this.currentCategory}</span>
+                                        <time datetime="${post.frontmatter.date || post.date}">${formattedDate}</time>
+                                    </div>
+                                    <h3>${title}</h3>
+                                    <p class="card-excerpt">${excerpt}</p>
+                                    <div class="card-author">
+                                        <span>👤 Trail Explorer</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    `;
+                }).join('');
+            }
+
+            // Setup filters and search
+            setupFilters() {
+                const searchInput = document.getElementById('searchInput');
+                const sortFilter = document.getElementById('sortFilter');
+                const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+                const applyFilters = () => {
+                    const searchValue = searchInput.value.toLowerCase();
+                    const sortValue = sortFilter.value;
+
+                    let filtered = [...this.filteredPosts];
+
+                    // Apply search filter
+                    if (searchValue) {
+                        filtered = filtered.filter(post => {
+                            const title = (post.frontmatter.title || '').toLowerCase();
+                            const body = (post.body || '').toLowerCase();
+                            return title.includes(searchValue) || body.includes(searchValue);
+                        });
+                        clearFiltersBtn.style.display = 'block';
+                    } else {
+                        clearFiltersBtn.style.display = 'none';
+                    }
+
+                    // Apply sorting
+                    if (sortValue === 'title') {
+                        filtered.sort((a, b) => (a.frontmatter.title || '').localeCompare(b.frontmatter.title || ''));
+                    } else {
+                        filtered.sort((a, b) => new Date(b.frontmatter.date || b.date) - new Date(a.frontmatter.date || a.date));
+                    }
+
+                    this.renderPosts(filtered);
+                };
+
+                const clearFilters = () => {
+                    searchInput.value = '';
+                    clearFiltersBtn.style.display = 'none';
+                    applyFilters();
+                };
+
+                searchInput.addEventListener('input', applyFilters);
+                sortFilter.addEventListener('change', applyFilters);
+                clearFiltersBtn.addEventListener('click', clearFilters);
+            }
+
+            // Show error state
+            showError() {
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('errorState').style.display = 'block';
+            }
+
+            // Load category page
+            async loadCategoryPage() {
+                const category = this.getCategoryFromURL();
+                if (!category) {
+                    this.showError();
+                    return;
+                }
+
+                this.currentCategory = category;
+                console.log('Loading category:', category);
+
+                // Update page title and meta tags
+                const title = `${category} | The Unfiltered Trail`;
+                document.title = title;
+                document.getElementById('pageTitle').textContent = title;
+                document.getElementById('ogTitle').content = title;
+                document.getElementById('twitterTitle').content = title;
+
+                // Load all posts
+                this.allPosts = await this.fetchAllPosts();
+                this.filteredPosts = this.filterPostsByCategory(this.allPosts, category);
+
+                if (this.filteredPosts.length === 0 && this.allPosts.length > 0) {
+                    this.showError();
+                    return;
+                }
+
+                // Update category header
+                const categoryInfo = this.categoryData[category] || {
+                    icon: '📝',
+                    description: 'Explore posts in this category'
+                };
+
+                document.getElementById('categoryIcon').textContent = categoryInfo.icon;
+                document.getElementById('categoryTitle').textContent = category;
+                document.getElementById('categoryDescription').textContent = categoryInfo.description;
+                document.getElementById('postCount').textContent = `${this.filteredPosts.length} post${this.filteredPosts.length !== 1 ? 's' : ''}`;
+
+                // Setup filters and render posts
+                this.setupFilters();
+                this.renderPosts(this.filteredPosts);
+
+                // Show content
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('categoryContent').style.display = 'block';
+            }
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = new CategoryPageLoader();
+            loader.loadCategoryPage();
+        });
+
+        // Netlify Identity Widget
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

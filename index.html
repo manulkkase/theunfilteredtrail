@@ -78,8 +78,13 @@
             <h2 class="section-title">Latest Adventures</h2>
             <div class="filters">
                 <select id="regionFilter">
-                    <option value="">All Regions</option>
-                    <option value="Asia">Asia</option>
+                    <option value="">All Categories</option>
+                    <option value="K-Culture & Palaces">K-Culture & Palaces</option>
+                    <option value="Street Food & Night Markets">Street Food & Night Markets</option>
+                    <option value="Mountains & Rice Terraces">Mountains & Rice Terraces</option>
+                    <option value="Beaches, Bays & Islands">Beaches, Bays & Islands</option>
+                    <option value="City Vibes & Night-life">City Vibes & Night-life</option>
+                    <option value="Budget Hacks & Transport">Budget Hacks & Transport</option>
                 </select>
                 <input type="text" id="searchInput" placeholder="Search posts...">
                 <select id="sortFilter">
@@ -237,6 +242,30 @@
                 } catch (error) {
                     alert('Something went wrong. Please try again later.');
                 }
+            });
+
+            // Category card click events
+            document.querySelectorAll('.category').forEach(card => {
+                card.addEventListener('click', () => {
+                    const category = card.dataset.category;
+                    if (category) {
+                        window.location.href = `category.html?category=${encodeURIComponent(category)}`;
+                    }
+                });
+                
+                // Add hover effect
+                card.style.cursor = 'pointer';
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-8px)';
+                    card.style.boxShadow = '0 12px 40px rgba(30, 58, 95, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 8px 30px rgba(30, 58, 95, 0.1)';
+                });
             });
 
             // Smooth scrolling for anchor links
