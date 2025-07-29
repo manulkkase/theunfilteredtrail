@@ -2,6 +2,7 @@
 layout: post
 title: why not working properly
 date: 2025-07-29T11:29:02.050Z
+category: Beaches, Bays & Islands
 featured_image: /assets/images/Whisk_7ddfce10ef.jpg
 ---
 # 🇰🇷How to Travel from Australia to Korea Without Losing Your Mind 😮✈️
