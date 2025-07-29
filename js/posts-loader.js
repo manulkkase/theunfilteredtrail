@@ -146,7 +146,7 @@ class PostsLoader {
             
             return `
                 <article class="card">
-                    <a href="${jekyllUrl}" onclick="this.href = checkJekyllUrl('${jekyllUrl}', '${fallbackUrl}')" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="${fallbackUrl}" style="text-decoration: none; color: inherit; display: block;">
                         <img src="${featuredImage}" alt="${title}" loading="lazy" onerror="this.src='/images/Whisk_a35f7a9c81.jpg'">
                         <div class="card-content">
                             <div class="card-meta">
@@ -166,11 +166,7 @@ class PostsLoader {
     }
 }
 
-// Jekyll URL 존재 여부 확인 함수
-function checkJekyllUrl(jekyllUrl, fallbackUrl) {
-    // Jekyll 빌드된 사이트에서는 Jekyll URL 사용, 그렇지 않으면 JavaScript 기반 페이지 사용
-    return jekyllUrl;
-}
+// 포스트는 post.html 페이지로 직접 이동합니다
 
 // 전역 인스턴스 생성
 window.postsLoader = new PostsLoader();
