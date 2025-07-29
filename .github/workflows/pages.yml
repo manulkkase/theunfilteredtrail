@@ -23,14 +23,8 @@ jobs:
         
     - name: Build Jekyll site
       run: |
-        if [ -f "Gemfile" ]; then
-          bundle exec jekyll build
-        else
-          echo "No Gemfile found, using static HTML files"
-          mkdir -p _site
-          cp -r *.html css images admin assets js _site/ || true
-          cp -r *.md _site/ || true
-        fi
+        bundle exec jekyll build
+        echo "Jekyll build completed successfully"
         
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2

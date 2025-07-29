@@ -27,6 +27,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- Posts Loader Script -->
+    <script src="js/posts-loader.js"></script>
+    
     <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -87,36 +90,11 @@
             </div>
             
             <div class="grid posts-grid" id="postsGrid">
-                <!-- Posts will be loaded here from Jekyll or Netlify CMS -->
-                <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);">
-                    <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">📝</div>
-                    <h3 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Jekyll + Netlify CMS Ready</h3>
-                    <p style="color: var(--light); margin-bottom: 2rem;">Your blog is now configured for Jekyll and Netlify CMS. Posts created through the admin panel will appear here automatically.</p>
-                    <a href="admin/" style="
-                        background: var(--accent); 
-                        color: white; 
-                        padding: 1rem 2rem; 
-                        border-radius: 12px; 
-                        text-decoration: none; 
-                        font-weight: 600; 
-                        display: inline-block;
-                        transition: all 0.3s ease;
-                        margin-right: 1rem;
-                    " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        ✨ Access Admin Panel
-                    </a>
-                    <a href="https://docs.netlify.com/cms/" target="_blank" style="
-                        background: var(--primary); 
-                        color: white; 
-                        padding: 1rem 2rem; 
-                        border-radius: 12px; 
-                        text-decoration: none; 
-                        font-weight: 600; 
-                        display: inline-block;
-                        transition: all 0.3s ease;
-                    " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        📖 CMS Documentation
-                    </a>
+                <!-- Posts will be loaded here dynamically from GitHub via JavaScript -->
+                <div id="loadingIndicator" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">⏳</div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Loading Posts...</h3>
+                    <p style="color: var(--light);">Fetching latest travel stories from GitHub...</p>
                 </div>
             </div>
         </section>
