@@ -155,7 +155,7 @@ class PostsLoader {
                             <h3>${title}</h3>
                             <p class="card-excerpt">${excerpt}</p>
                             <div class="card-author">
-                                <span>👤 Trail Explorer</span>
+                                <span>👤 The Curious Wanderer</span>
                             </div>
                         </div>
                     </a>

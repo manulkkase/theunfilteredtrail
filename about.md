@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About The Trail Explorer | The Unfiltered Trail
+title: About The Curious Wanderer | The Unfiltered Trail
 description: Meet the person behind The Unfiltered Trail. From Aussie backpacker to Seoul-Saigon local insider.
 ---
 

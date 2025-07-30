@@ -90,7 +90,7 @@ categories: ["K-Culture & Palaces", "City Vibes & Night-life"]
 tags: ["Korea", "Travel", "Culture"]
 featured_image: "/images/your-image.jpg"
 excerpt: "Brief description of your post"
-author: "Trail Explorer"
+author: "The Curious Wanderer"
 ---
 
 Your post content in Markdown format...
