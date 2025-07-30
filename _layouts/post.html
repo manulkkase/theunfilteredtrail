@@ -56,7 +56,7 @@ layout: default
         <div class="post-share">
             <h4>Share this post:</h4>
             <div class="share-buttons">
-                <a href="#" onclick="shareOnTwitter()" aria-label="Share on Twitter">🐦 Twitter</a>
+                <a href="#" onclick="shareOnInstagram()" aria-label="Share on Instagram">📷 Instagram</a>
                 <a href="#" onclick="shareOnFacebook()" aria-label="Share on Facebook">📘 Facebook</a>
                 <a href="#" onclick="copyLink()" aria-label="Copy link">🔗 Copy Link</a>
             </div>
@@ -112,10 +112,22 @@ layout: default
 
 <script>
     // Share functionality
-    function shareOnTwitter() {
-        const text = encodeURIComponent('{{ page.title }} - {{ page.excerpt | default: site.description }}');
-        const url = encodeURIComponent(window.location.href);
-        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    function shareOnInstagram() {
+        const title = '{{ page.title }}';
+        const url = window.location.href;
+        const shareText = `${title}\n\nRead more: ${url}\n\n#TheUnfilteredTrail #Travel #Asia`;
+        
+        navigator.clipboard.writeText(shareText).then(() => {
+            alert('Post content copied to clipboard! You can now paste it in Instagram.');
+        }).catch(() => {
+            // Fallback: try to open Instagram app or website
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.open('instagram://camera', '_blank');
+            } else {
+                window.open('https://www.instagram.com/', '_blank');
+            }
+        });
     }
 
     function shareOnFacebook() {

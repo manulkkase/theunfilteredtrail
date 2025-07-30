@@ -98,7 +98,7 @@
             <div class="post-share" style="margin: 3rem 0; text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 16px;">
                 <h3 style="margin-bottom: 1rem; color: var(--primary);">Share this post</h3>
                 <div class="share-buttons">
-                    <button id="shareTwitter" class="btn btn-secondary" style="margin: 0.5rem;">Share on Twitter</button>
+                    <button id="shareInstagram" class="btn btn-secondary" style="margin: 0.5rem;">Share on Instagram</button>
                     <button id="shareFacebook" class="btn btn-secondary" style="margin: 0.5rem;">Share on Facebook</button>
                     <button id="copyLink" class="btn btn-secondary" style="margin: 0.5rem;">Copy Link</button>
                 </div>
@@ -318,8 +318,20 @@
                 const url = window.location.href;
                 const title = post.frontmatter.title || 'Check out this post';
                 
-                document.getElementById('shareTwitter').onclick = () => {
-                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank');
+                document.getElementById('shareInstagram').onclick = () => {
+                    // Instagram doesn't support direct URL sharing, so we copy the post info
+                    const shareText = `${title}\n\nRead more: ${url}\n\n#TheUnfilteredTrail #Travel #Asia`;
+                    navigator.clipboard.writeText(shareText).then(() => {
+                        alert('Post content copied to clipboard! You can now paste it in Instagram.');
+                    }).catch(() => {
+                        // Fallback: try to open Instagram app or website
+                        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                        if (isMobile) {
+                            window.open('instagram://camera', '_blank');
+                        } else {
+                            window.open('https://www.instagram.com/', '_blank');
+                        }
+                    });
                 };
                 
                 document.getElementById('shareFacebook').onclick = () => {
