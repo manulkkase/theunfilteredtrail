@@ -775,13 +775,15 @@ footer {
     
     /* Dark mode category badges */
     .card-category {
-        background: var(--link-primary);
-        border-color: var(--link-primary);
+        background: #8B5A3C;            /* Lighter brown for dark mode */
+        border-color: #8B5A3C;
+        color: var(--white);
     }
     
     .card-category:hover {
         background: var(--white);
-        color: var(--link-primary);
+        color: #8B5A3C;
+        border-color: #8B5A3C;
     }
     
     /* Dark mode title styles */
@@ -795,7 +797,7 @@ footer {
 .card-category {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: var(--accent);
+    background: #5D3A1A;            /* Much darker brown for better contrast */
     color: var(--white);
     font-size: 0.75rem;
     font-weight: 600;
@@ -804,14 +806,15 @@ footer {
     border-radius: 20px;
     text-decoration: none;
     transition: var(--transition);
+    border: 1px solid #5D3A1A;
 }
 
 .card-category:hover {
     background: var(--white);
-    color: var(--link-primary);
-    border-color: var(--link-primary);
+    color: #5D3A1A;
+    border-color: #5D3A1A;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.3);
+    box-shadow: 0 4px 12px rgba(93, 58, 26, 0.4);
 }
 
 .card-category:focus {
