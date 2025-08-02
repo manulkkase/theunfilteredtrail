@@ -3,7 +3,7 @@
 /* CSS Variables */
 :root {
     --primary: #1e3a5f;
-    --accent: #e74c3c;
+    --accent: #8B5A3C;              /* Warm earth brown - natural and inviting */
     --white: #fff;
     --text: #2c3e50;
     --light: #6c757d;
@@ -13,13 +13,13 @@
     --shadow-hover: 0 15px 50px rgba(30, 58, 95, 0.15);
     --transition: all 0.3s ease;
     
-    /* Enhanced link colors for better readability */
-    --link-primary: #c0392b;        /* Darker red for better contrast */
-    --link-hover: #1e3a5f;          /* Primary blue for hover */
-    --link-visited: #8e44ad;        /* Purple for visited links */
-    --link-focus: #2980b9;          /* Blue for focus state */
+    /* Enhanced link colors - Warm Earth Palette */
+    --link-primary: #8B5A3C;        /* Warm brown - natural and trustworthy */
+    --link-hover: #A0522D;          /* Sienna - warmer on hover */
+    --link-visited: #6B4E3D;        /* Darker brown for visited links */
+    --link-focus: #CD853F;          /* Peru - lighter brown for focus */
     --link-light-bg: #2c3e50;       /* Dark text on light backgrounds */
-    --link-dark-bg: #ecf0f1;        /* Light text on dark backgrounds */
+    --link-dark-bg: #F5DEB3;        /* Wheat color for dark backgrounds */
 }
 
 /* Reset & Base Styles */
@@ -316,9 +316,9 @@ nav {
 }
 
 .btn-primary:hover {
-    background: #c0392b;
+    background: #A0522D;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.3);
 }
 
 .btn-secondary {
@@ -499,7 +499,7 @@ section {
 }
 
 .newsletter button:hover {
-    background: #c0392b;
+    background: #A0522D;
 }
 
 /* Footer */
@@ -747,13 +747,14 @@ footer {
         --border: #333;
         --white: #2a2a2a;
         
-        /* Dark mode link colors for better contrast */
-        --link-primary: #ff6b6b;        /* Lighter red for dark backgrounds */
-        --link-hover: #74b9ff;          /* Light blue for hover */
-        --link-visited: #a29bfe;        /* Light purple for visited */
-        --link-focus: #00cec9;          /* Cyan for focus */
-        --link-light-bg: #ddd6fe;       /* Light text for dark content areas */
-        --link-dark-bg: #ff6b6b;        /* Accent color for hero/footer */
+        /* Dark mode link colors - Warm Earth Palette */
+        --accent: #CD853F;              /* Peru - lighter warm tone for dark mode */
+        --link-primary: #D2B48C;        /* Tan - warm and readable on dark */
+        --link-hover: #DEB887;          /* Burlywood - lighter on hover */
+        --link-visited: #BC9A6A;        /* Darker tan for visited */
+        --link-focus: #F4A460;          /* Sandy brown for focus */
+        --link-light-bg: #F5DEB3;       /* Wheat for content areas */
+        --link-dark-bg: #D2B48C;        /* Tan for hero/footer */
     }
     
     body {
@@ -769,7 +770,7 @@ footer {
     
     .share-buttons a:hover,
     .share-buttons button:hover {
-        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        box-shadow: 0 6px 20px rgba(210, 180, 140, 0.4);
     }
     
     /* Dark mode category badges */
@@ -810,7 +811,7 @@ footer {
     color: var(--link-primary);
     border-color: var(--link-primary);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
+    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.3);
 }
 
 .card-category:focus {
@@ -1003,7 +1004,7 @@ footer {
     color: var(--link-primary);
     border-color: var(--link-primary);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(192, 57, 43, 0.3);
+    box-shadow: 0 6px 20px rgba(139, 90, 60, 0.3);
     text-decoration: none;
 }
 
@@ -1042,7 +1043,7 @@ footer {
 }
 
 .load-more-btn {
-    background: linear-gradient(135deg, var(--accent), #ff6b6b);
+    background: linear-gradient(135deg, var(--accent), #CD853F);
     color: var(--white);
     border: none;
     padding: 1rem 2.5rem;
@@ -1051,7 +1052,7 @@ footer {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 4px 20px rgba(139, 90, 60, 0.3);
     position: relative;
     overflow: hidden;
     min-width: 200px;
@@ -1063,8 +1064,8 @@ footer {
 
 .load-more-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(231, 76, 60, 0.4);
-    background: linear-gradient(135deg, #ff6b6b, var(--accent));
+    box-shadow: 0 6px 25px rgba(139, 90, 60, 0.4);
+    background: linear-gradient(135deg, #CD853F, var(--accent));
 }
 
 .load-more-btn:active:not(:disabled) {
