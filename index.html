@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="images/Whisk_a35f7a9c81.jpg">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -37,11 +37,11 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">The Unfiltered Trail</a>
-            <div class="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#posts">Posts</a></li>
@@ -274,6 +274,43 @@
                     card.style.boxShadow = '0 8px 30px rgba(30, 58, 95, 0.1)';
                 });
             });
+
+            // Mobile menu toggle functionality
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isActive = navMenu.classList.contains('active');
+                    
+                    navMenu.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', !isActive);
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = isActive ? 'auto' : 'hidden';
+                });
+                
+                // Close menu when clicking on a link
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
 
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
