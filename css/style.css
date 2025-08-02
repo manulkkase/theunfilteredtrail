@@ -12,6 +12,14 @@
     --shadow: 0 8px 30px rgba(30, 58, 95, 0.1);
     --shadow-hover: 0 15px 50px rgba(30, 58, 95, 0.15);
     --transition: all 0.3s ease;
+    
+    /* Enhanced link colors for better readability */
+    --link-primary: #c0392b;        /* Darker red for better contrast */
+    --link-hover: #1e3a5f;          /* Primary blue for hover */
+    --link-visited: #8e44ad;        /* Purple for visited links */
+    --link-focus: #2980b9;          /* Blue for focus state */
+    --link-light-bg: #2c3e50;       /* Dark text on light backgrounds */
+    --link-dark-bg: #ecf0f1;        /* Light text on dark backgrounds */
 }
 
 /* Reset & Base Styles */
@@ -61,15 +69,66 @@ p {
     color: var(--text);
 }
 
+/* Enhanced link styles for better readability */
 a {
-    color: var(--accent);
+    color: var(--link-primary);
     text-decoration: none;
     transition: var(--transition);
+    font-weight: 500;
 }
 
 a:hover {
-    color: var(--primary);
+    color: var(--link-hover);
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a:focus {
+    color: var(--link-focus);
+    outline: 2px solid var(--link-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+a:active {
+    color: var(--primary);
+    transform: translateY(1px);
+}
+
+/* Light background link variants */
+.post-content a,
+.card-content a,
+.footer-section a {
+    color: var(--link-light-bg);
+    font-weight: 600;
+}
+
+.post-content a:hover,
+.card-content a:hover {
+    color: var(--link-primary);
+    background: rgba(231, 76, 60, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Dark background link variants */
+.hero a,
+.newsletter a,
+footer a {
+    color: var(--link-dark-bg);
+    font-weight: 600;
+}
+
+.hero a:hover,
+.newsletter a:hover,
+footer a:hover {
+    color: var(--white);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 /* Header & Navigation */
@@ -116,8 +175,16 @@ nav {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
+    color: var(--link-primary);
+    border-bottom-color: var(--link-primary);
+    font-weight: 600;
+}
+
+.nav-menu a:focus {
+    color: var(--link-focus);
+    outline: 2px solid var(--link-focus);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 /* Mobile Navigation */
@@ -317,12 +384,14 @@ section {
 }
 
 .card-category {
-    background: var(--accent);
+    background: var(--link-primary);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
+    border: 2px solid var(--link-primary);
+    transition: var(--transition);
 }
 
 .card h3 {
@@ -670,11 +739,41 @@ footer {
         --light: #a0a0a0;
         --border: #333;
         --white: #2a2a2a;
+        
+        /* Dark mode link colors for better contrast */
+        --link-primary: #ff6b6b;        /* Lighter red for dark backgrounds */
+        --link-hover: #74b9ff;          /* Light blue for hover */
+        --link-visited: #a29bfe;        /* Light purple for visited */
+        --link-focus: #00cec9;          /* Cyan for focus */
+        --link-light-bg: #ddd6fe;       /* Light text for dark content areas */
+        --link-dark-bg: #ff6b6b;        /* Accent color for hero/footer */
     }
     
     body {
         background-color: var(--bg);
         color: var(--text);
+    }
+    
+    /* Enhanced dark mode share buttons */
+    .post-share {
+        background: linear-gradient(135deg, #2a2a2a, #333);
+        border-color: #444;
+    }
+    
+    .share-buttons a:hover,
+    .share-buttons button:hover {
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    }
+    
+    /* Dark mode category badges */
+    .card-category {
+        background: var(--link-primary);
+        border-color: var(--link-primary);
+    }
+    
+    .card-category:hover {
+        background: var(--white);
+        color: var(--link-primary);
     }
 }
 
@@ -694,9 +793,16 @@ footer {
 }
 
 .card-category:hover {
-    background: var(--primary);
-    color: var(--white);
+    background: var(--white);
+    color: var(--link-primary);
+    border-color: var(--link-primary);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
+}
+
+.card-category:focus {
+    outline: 2px solid var(--link-focus);
+    outline-offset: 2px;
 }
 
 /* Category Page Styles */
@@ -835,6 +941,65 @@ footer {
     }
 }
 
+/* Enhanced Share Buttons and Interactive Elements */
+.post-share {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.post-share h3,
+.post-share h4 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.share-buttons a,
+.share-buttons button {
+    background: var(--link-primary);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 2px solid var(--link-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-buttons a:hover,
+.share-buttons button:hover {
+    background: var(--white);
+    color: var(--link-primary);
+    border-color: var(--link-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192, 57, 43, 0.3);
+    text-decoration: none;
+}
+
+.share-buttons a:focus,
+.share-buttons button:focus {
+    outline: 2px solid var(--link-focus);
+    outline-offset: 2px;
+}
+
 /* Print styles */
 @media print {
     header, footer, .newsletter, .ad-space, .filters, .category-header {
@@ -960,6 +1125,32 @@ footer {
     .no-more-posts {
         margin: 1.5rem 1rem;
         padding: 1.5rem;
+    }
+    
+    /* Mobile share buttons */
+    .share-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .share-buttons a,
+    .share-buttons button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    /* Mobile link improvements */
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .nav-menu a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
     }
 }
 
