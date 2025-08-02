@@ -754,3 +754,122 @@ footer {
         border: 1px solid var(--text);
     }
 }
+
+/* Load More Button Styles */
+.load-more-container {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.load-more-btn {
+    background: linear-gradient(135deg, var(--accent), #ff6b6b);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.load-more-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(231, 76, 60, 0.4);
+    background: linear-gradient(135deg, #ff6b6b, var(--accent));
+}
+
+.load-more-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.load-more-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* No More Posts Message */
+.no-more-posts {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(30, 58, 95, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 2px dashed var(--border);
+}
+
+.no-more-posts p:first-of-type {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.no-more-posts p:last-of-type {
+    color: var(--light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Post Card Animation */
+.post-card-new {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Mobile Responsive Load More Button */
+@media (max-width: 768px) {
+    .load-more-btn {
+        padding: 0.875rem 2rem;
+        font-size: 0.9rem;
+        min-width: 180px;
+    }
+    
+    .load-more-container {
+        margin: 2rem 0;
+        padding: 0 1rem;
+    }
+    
+    .no-more-posts {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .load-more-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+        min-width: 160px;
+    }
+    
+    .loading-spinner {
+        width: 16px;
+        height: 16px;
+    }
+}

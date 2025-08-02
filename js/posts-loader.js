@@ -3,8 +3,12 @@
 class PostsLoader {
     constructor() {
         this.posts = [];
+        this.displayedPosts = [];
         this.githubRepo = 'manulkkase/theunfilteredtrail';
         this.postsPath = '_posts';
+        this.postsPerPage = 6;
+        this.currentPage = 0;
+        this.isLoading = false;
     }
 
     // GitHub API를 통해 _posts 폴더의 파일 목록 가져오기
@@ -164,6 +168,165 @@ class PostsLoader {
         }).join('');
     }
 
+    // Load More 기능을 위한 초기 포스트 렌더링
+    renderInitialPosts(posts, containerId = 'postsGrid') {
+        this.posts = posts;
+        this.displayedPosts = [];
+        this.currentPage = 0;
+        
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        if (posts.length === 0) {
+            container.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">📝</div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">No Posts Yet</h3>
+                    <p style="color: var(--light); margin-bottom: 2rem;">Create your first post using the admin panel!</p>
+                    <a href="admin/" class="btn btn-primary">✨ Create First Post</a>
+                </div>
+            `;
+            this.hideLoadMoreButton();
+            return;
+        }
+
+        // 초기 포스트들 렌더링
+        container.innerHTML = '';
+        this.loadMorePosts();
+    }
+
+    // 더 많은 포스트 로드하기
+    loadMorePosts() {
+        if (this.isLoading) return;
+        
+        this.isLoading = true;
+        this.showLoadingState();
+
+        // 다음 페이지의 포스트들 가져오기
+        const startIndex = this.currentPage * this.postsPerPage;
+        const endIndex = startIndex + this.postsPerPage;
+        const newPosts = this.posts.slice(startIndex, endIndex);
+
+        // 애니메이션을 위한 딜레이
+        setTimeout(() => {
+            this.appendPosts(newPosts);
+            this.displayedPosts = this.displayedPosts.concat(newPosts);
+            this.currentPage++;
+            this.updateLoadMoreButton();
+            this.isLoading = false;
+        }, 800); // 로딩 애니메이션 시간
+    }
+
+    // 새 포스트들을 DOM에 추가 (fadeIn 애니메이션과 함께)
+    appendPosts(posts) {
+        const container = document.getElementById('postsGrid');
+        if (!container || posts.length === 0) return;
+
+        const postsHTML = posts.map(post => {
+            const title = post.frontmatter.title || 'Untitled';
+            const date = new Date(post.frontmatter.date || post.date);
+            const formattedDate = date.toLocaleDateString('en-AU', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            // Get category for display and linking
+            const category = post.frontmatter.category || post.frontmatter.categories || 'Uncategorized';
+            const displayCategory = Array.isArray(category) ? category[0] : category;
+            
+            // Handle both /assets/images/ and /images/ paths
+            let featuredImage = post.frontmatter.featured_image || '/images/Whisk_a35f7a9c81.jpg';
+            if (featuredImage.startsWith('/assets/')) {
+                featuredImage = featuredImage.replace('/assets/', '/');
+            }
+            const excerpt = post.excerpt || 'No excerpt available';
+            
+            // Generate post URL
+            const fallbackUrl = `post.html?slug=${post.slug}`;
+            
+            return `
+                <article class="card post-card-new" style="opacity: 0; transform: translateY(20px);">
+                    <a href="${fallbackUrl}" style="text-decoration: none; color: inherit; display: block;">
+                        <img src="${featuredImage}" alt="${title}" loading="lazy" onerror="this.src='/images/Whisk_a35f7a9c81.jpg'">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <a href="category.html?category=${encodeURIComponent(displayCategory)}" class="card-category" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">${displayCategory}</a>
+                                <time datetime="${post.frontmatter.date || post.date}">${formattedDate}</time>
+                            </div>
+                            <h3>${title}</h3>
+                            <p class="card-excerpt">${excerpt}</p>
+                            <div class="card-author">
+                                <span>👤 The Curious Wanderer</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            `;
+        }).join('');
+
+        // 새 포스트들을 DOM에 추가
+        container.insertAdjacentHTML('beforeend', postsHTML);
+
+        // fadeIn 애니메이션 적용
+        setTimeout(() => {
+            const newCards = container.querySelectorAll('.post-card-new');
+            newCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                    card.classList.remove('post-card-new');
+                }, index * 100); // 순차적 애니메이션
+            });
+        }, 50);
+    }
+
+    // Load More 버튼 상태 업데이트
+    updateLoadMoreButton() {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const loadMoreContainer = document.getElementById('loadMoreContainer');
+        
+        if (!loadMoreBtn || !loadMoreContainer) return;
+
+        const remainingPosts = this.posts.length - this.displayedPosts.length;
+        
+        if (remainingPosts <= 0) {
+            loadMoreContainer.innerHTML = `
+                <div class="no-more-posts" style="text-align: center; padding: 2rem; color: var(--light);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">✨</div>
+                    <p style="font-size: 1.1rem; font-weight: 600;">You've seen all posts!</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Check back later for new adventures.</p>
+                </div>
+            `;
+        } else {
+            loadMoreBtn.innerHTML = `Load More Posts (${remainingPosts} remaining)`;
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.style.opacity = '1';
+        }
+    }
+
+    // 로딩 상태 표시
+    showLoadingState() {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.innerHTML = `
+                <span class="loading-spinner"></span>
+                Loading Posts...
+            `;
+            loadMoreBtn.disabled = true;
+            loadMoreBtn.style.opacity = '0.7';
+        }
+    }
+
+    // Load More 버튼 숨기기
+    hideLoadMoreButton() {
+        const loadMoreContainer = document.getElementById('loadMoreContainer');
+        if (loadMoreContainer) {
+            loadMoreContainer.style.display = 'none';
+        }
+    }
+
     // 카테고리별 필터링 기능
     filterPostsByCategory(category) {
         if (!category) return this.posts;
@@ -258,7 +421,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log('Loading posts from GitHub...');
     const posts = await window.postsLoader.loadAllPosts();
     console.log(`Loaded ${posts.length} posts:`, posts);
-    window.postsLoader.renderPosts(posts);
+    
+    // Load More 기능이 있는 페이지인지 확인
+    if (document.getElementById('loadMoreContainer')) {
+        window.postsLoader.renderInitialPosts(posts);
+        
+        // Load More 버튼 이벤트 리스너 추가
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                window.postsLoader.loadMorePosts();
+            });
+        }
+    } else {
+        // 기존 방식으로 모든 포스트 렌더링 (카테고리 페이지 등)
+        window.postsLoader.renderPosts(posts);
+    }
     
     // 홈페이지에서만 필터 기능 활성화
     if (document.getElementById('searchInput')) {
