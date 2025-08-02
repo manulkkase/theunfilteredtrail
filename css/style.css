@@ -52,6 +52,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary);
 }
 
+/* Enhanced title styles with text shadows */
+.category-title, h1, h2, .section-title {
+    color: #2c3e50;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
 /* Category menu font styling */
 .nav-menu {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -774,6 +781,12 @@ footer {
     .card-category:hover {
         background: var(--white);
         color: var(--link-primary);
+    }
+    
+    /* Dark mode title styles */
+    .category-title, h1, h2, .section-title {
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 }
 
