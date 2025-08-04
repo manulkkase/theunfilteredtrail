@@ -1,25 +1,26 @@
-<!-- Responsive Image Template for Jekyll -->
+<!-- Responsive Image Template with Netlify Image CDN -->
 <figure class="responsive-image">
   <picture>
-    {% comment %} WebP sources for modern browsers {% endcomment %}
-    {% for size in resized %}
-      {% assign webp_path = size.path | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
-      {% if forloop.first %}
-        <source 
-          srcset="{% for s in resized %}{{ s.path | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' }} {{ s.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
-          sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px"
-          type="image/webp">
-      {% endif %}
-    {% endfor %}
-    
-    {% comment %} Fallback sources for older browsers {% endcomment %}
+    {% comment %} WebP sources using Netlify Image CDN {% endcomment %}
     <source 
-      srcset="{% for size in resized %}{{ size.path }} {{ size.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+      srcset="/.netlify/images?url={{ original.path | url_encode }}&w=320&fm=webp&q=85 320w,
+              /.netlify/images?url={{ original.path | url_encode }}&w=640&fm=webp&q=85 640w,
+              /.netlify/images?url={{ original.path | url_encode }}&w=1280&fm=webp&q=85 1280w,
+              /.netlify/images?url={{ original.path | url_encode }}&w=1920&fm=webp&q=85 1920w"
+      sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px"
+      type="image/webp">
+    
+    {% comment %} JPEG sources using Netlify Image CDN {% endcomment %}
+    <source 
+      srcset="/.netlify/images?url={{ original.path | url_encode }}&w=320&fm=jpg&q=85 320w,
+              /.netlify/images?url={{ original.path | url_encode }}&w=640&fm=jpg&q=85 640w,
+              /.netlify/images?url={{ original.path | url_encode }}&w=1280&fm=jpg&q=85 1280w,
+              /.netlify/images?url={{ original.path | url_encode }}&w=1920&fm=jpg&q=85 1920w"
       sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px">
     
     {% comment %} Fallback img element {% endcomment %}
     <img 
-      src="{{ original.path }}" 
+      src="/.netlify/images?url={{ original.path | url_encode }}&w=1280&fm=jpg&q=85" 
       alt="{{ alt | default: 'Travel photo from The Unfiltered Trail' }}"
       width="{{ original.width }}"
       height="{{ original.height }}"

@@ -7,25 +7,9 @@
   # Ruby version
   RUBY_VERSION = "3.2.0"
 
-# Netlify Image Optimization Plugin
-[[plugins]]
-  package = "@netlify/plugin-image-optim"
-  
-  [plugins.inputs]
-    # Process images in these directories
-    inputs = ["assets/images/**/*", "images/**/*", "_site/assets/**/*"]
-    
-    # Image formats to generate
-    formats = ["webp", "avif", "jpeg"]
-    
-    # Quality settings
-    quality = 85
-    
-    # Responsive image widths
-    widths = [320, 640, 1280, 1920]
-    
-    # Enable progressive JPEG
-    progressive = true
+# Netlify Image Transformations (Built-in)
+# Images will be automatically optimized via Netlify's CDN
+# Use /.netlify/images/ URLs for on-the-fly transformations
 
 # Redirect rules for clean URLs (Jekyll markdown files)
 [[redirects]]
