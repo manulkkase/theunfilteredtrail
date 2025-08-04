@@ -1,0 +1,27 @@
+{
+  "name": "theunfilteredtrail",
+  "version": "1.0.0",
+  "description": "Jekyll travel blog with optimized images",
+  "private": true,
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "clean": "bundle exec jekyll clean"
+  },
+  "devDependencies": {
+    "@netlify/plugin-image-optim": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manulkkase/theunfilteredtrail.git"
+  },
+  "keywords": [
+    "jekyll",
+    "travel",
+    "blog",
+    "responsive-images",
+    "netlify"
+  ],
+  "author": "The Curious Wanderer",
+  "license": "MIT"
+}

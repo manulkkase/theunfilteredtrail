@@ -15,6 +15,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-responsive-image
 
 # Collections
 collections:
@@ -49,3 +50,35 @@ exclude:
 timezone: Australia/Sydney
 encoding: utf-8
 safe: false
+
+# Responsive Image Configuration
+responsive_image:
+  # Global settings
+  base_path: assets/images
+  output_path_format: assets/resized/%{width}/%{basename}
+  
+  # Default template for responsive images
+  template: _includes/responsive-image.html
+  
+  # Default sizes for responsive images
+  sizes:
+    - width: 320   # Mobile
+    - width: 640   # Tablet
+    - width: 1280  # Desktop
+    - width: 1920  # Large screens
+  
+  # Image quality settings
+  quality: 85
+  
+  # Strip image metadata for smaller file sizes
+  strip: true
+  
+  # Cache responsive images (speeds up rebuilds)
+  cache: true
+  
+  # Default attributes for images
+  default_quality: 85
+  save_to_source: false
+  
+  # Extra image formats (WebP will be handled by Netlify)
+  auto_rotate: true

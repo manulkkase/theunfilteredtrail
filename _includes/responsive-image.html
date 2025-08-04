@@ -1,0 +1,37 @@
+<!-- Responsive Image Template for Jekyll -->
+<figure class="responsive-image">
+  <picture>
+    {% comment %} WebP sources for modern browsers {% endcomment %}
+    {% for size in resized %}
+      {% assign webp_path = size.path | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+      {% if forloop.first %}
+        <source 
+          srcset="{% for s in resized %}{{ s.path | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' }} {{ s.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+          sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px"
+          type="image/webp">
+      {% endif %}
+    {% endfor %}
+    
+    {% comment %} Fallback sources for older browsers {% endcomment %}
+    <source 
+      srcset="{% for size in resized %}{{ size.path }} {{ size.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+      sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px">
+    
+    {% comment %} Fallback img element {% endcomment %}
+    <img 
+      src="{{ original.path }}" 
+      alt="{{ alt | default: 'Travel photo from The Unfiltered Trail' }}"
+      width="{{ original.width }}"
+      height="{{ original.height }}"
+      loading="lazy"
+      decoding="async"
+      class="responsive-image__img"
+      {% if caption %}aria-describedby="caption-{{ original.basename }}"{% endif %}>
+  </picture>
+  
+  {% if caption %}
+    <figcaption id="caption-{{ original.basename }}" class="responsive-image__caption">
+      {{ caption }}
+    </figcaption>
+  {% endif %}
+</figure>
