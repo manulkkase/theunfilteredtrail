@@ -4,11 +4,11 @@ title: "Aussie Hipster's Guide to Seongsu: Seoul's Coolest Neighbourhood 🇰�
 date: 2025-08-05T07:21:53.648Z
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/5593/30992535732_ce6a425e90_c.jpg
-excerpt: "**Found your Fitzroy yet? Because Seongsu is it.**"
+excerpt: Found your Fitzroy yet? Because Seongsu is it.
 ---
-***Found your Fitzroy yet? Because Seongsu is it.***
+Found your Fitzroy yet? Because Seongsu is it.
 
-**If you’re searching for that perfect blend of industrial chic, artisan coffee, and curated cool, then welcome to Seongsu-dong. Often called the "Brooklyn of Seoul," this neighbourhood has transformed old shoe factories and warehouses into a haven for creatives, cafe-lovers, and anyone who appreciates a good vibe.**
+If you’re searching for that perfect blend of industrial chic, artisan coffee, and curated cool, then welcome to Seongsu-dong. Often called the "Brooklyn of Seoul," this neighbourhood has transformed old shoe factories and warehouses into a haven for creatives, cafe-lovers, and anyone who appreciates a good vibe.
 
 It’s the kind of place where you can spend a whole day wandering without a plan, stumbling upon hidden galleries, independent fashion stores, and some of the best flat whites you'll find in Korea.
 
@@ -27,7 +27,7 @@ The Perfect Day-Trip Itinerary
 <br><br><br><br>
 
 2. **Afternoon Stroll: Galleries & Aesthetic Shops 🎨**
-   After a caffeine hit, it's time to feed your creative soul. Seongsu's backstreets are a treasure trove of art and unique fashion. Wander through old warehouses and find pop-up exhibitions, hybrid gallery cafes, and boutique stores that feel a world away from the busy city.<br><br><br><br><a data-flickr-embed="true" href="https://www.flickr.com/photos/seoulkorea/49302516923/in/photolist-PC1T9C-PC1SHN-PC1SxY-KTmHmt-KyT1xq-2i7Gh4L-KXfNKh-2i7KRA8-2i7KRBR-2i7Gi34-L11jdX-KXfPxE-KXfP3m-KTmG8g-KXfPfA-2i7JMeD-KXfPTE-KXfNBG-KTmJrK-K4EfMa-KXfQ87-L11joB-KTmHPc-2i7KRQB-KyT1by-2i7GheW-KXfPLW-2i7JMiG-2i7KRRZ-2i7GhmK-2i7KRLd-2i7JMt6-2i7GhtJ-2i7KRYH-2i7Ghzq-2i7JMAf-2i7JMG2-2i7GhBe-2i7KS9H-2i7KSqp-2i7JMTp-2i7KSc8-2i7KSsJ-2i7JMUX-2i7KRx7-2i7JMN9-2i7JMRA-2i7GhLC-2i7GhZJ-2i7GhUd" title="Yeonmujang-gil (Seongsu-dong Cafe Alley)"><img src="https://live.staticflickr.com/65535/49302516923_280a089904_b.jpg" width="1024" height="683" alt="Yeonmujang-gil (Seongsu-dong Cafe Alley)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+   After a caffeine hit, it's time to feed your creative soul. Seongsu's backstreets are a treasure trove of art and unique fashion. Wander through old warehouses and find pop-up exhibitions, hybrid gallery cafes, and boutique stores that feel a world away from the busy city.<br><br><a data-flickr-embed="true" href="https://www.flickr.com/photos/seoulkorea/49302516923/in/photolist-PC1T9C-PC1SHN-PC1SxY-KTmHmt-KyT1xq-2i7Gh4L-KXfNKh-2i7KRA8-2i7KRBR-2i7Gi34-L11jdX-KXfPxE-KXfP3m-KTmG8g-KXfPfA-2i7JMeD-KXfPTE-KXfNBG-KTmJrK-K4EfMa-KXfQ87-L11joB-KTmHPc-2i7KRQB-KyT1by-2i7GheW-KXfPLW-2i7JMiG-2i7KRRZ-2i7GhmK-2i7KRLd-2i7JMt6-2i7GhtJ-2i7KRYH-2i7Ghzq-2i7JMAf-2i7JMG2-2i7GhBe-2i7KS9H-2i7KSqp-2i7JMTp-2i7KSc8-2i7KSsJ-2i7JMUX-2i7KRx7-2i7JMN9-2i7JMRA-2i7GhLC-2i7GhZJ-2i7GhUd" title="Yeonmujang-gil (Seongsu-dong Cafe Alley)"><img src="https://live.staticflickr.com/65535/49302516923_280a089904_b.jpg" width="1024" height="683" alt="Yeonmujang-gil (Seongsu-dong Cafe Alley)"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 D Museum: A pop-up space famous for its immersive, interactive media art.
 
