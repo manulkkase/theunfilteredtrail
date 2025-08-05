@@ -570,11 +570,38 @@ section {
     text-transform: none !important;
     letter-spacing: normal !important;
     box-shadow: none !important;
+    position: relative !important;
 }
 
-#mc_embed_signup .button:hover {
+#mc_embed_signup .button:hover:not(:disabled) {
     background: #A0522D !important;
     transform: translateY(-2px);
+}
+
+#mc_embed_signup .button:disabled {
+    background: var(--light) !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+/* Loading state animation */
+#mc_embed_signup .button:disabled::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
 }
 
 /* Response messages styling */
@@ -589,6 +616,19 @@ section {
     border-radius: 8px !important;
     font-size: 0.9rem !important;
     font-family: inherit !important;
+    animation: slideInFade 0.3s ease-out !important;
+    position: relative !important;
+}
+
+@keyframes slideInFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #mce-error-response {
@@ -597,10 +637,20 @@ section {
     border: 1px solid rgba(255, 59, 48, 0.3) !important;
 }
 
+#mce-error-response::before {
+    content: '⚠️ ';
+    margin-right: 0.5rem;
+}
+
 #mce-success-response {
     background: rgba(52, 199, 89, 0.1) !important;
     color: #34c759 !important;
     border: 1px solid rgba(52, 199, 89, 0.3) !important;
+}
+
+#mce-success-response::before {
+    content: '✅ ';
+    margin-right: 0.5rem;
 }
 
 /* Hide Mailchimp branding and unnecessary elements */
