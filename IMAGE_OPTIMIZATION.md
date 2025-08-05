@@ -1,13 +1,16 @@
-# 🖼️ Image Optimization Guide (Updated)
+# 🖼️ Image Optimization Guide (Simplified)
 
 ## 📖 **How to Use Responsive Images**
 
 ### **In Blog Posts (Markdown)**
 
-Add images to your markdown posts using the Jekyll responsive image tag:
+Add images to your markdown posts using the simple include:
 
 ```liquid
-{% responsive_image path: assets/images/seoul-street.jpg alt: "Bustling street scene in Seoul" caption: "Seoul's vibrant Myeongdong district at night" %}
+{% include responsive-image.html 
+   src="assets/images/seoul-street.jpg" 
+   alt="Bustling street scene in Seoul" 
+   caption="Seoul's vibrant Myeongdong district at night" %}
 ```
 
 ### **In Liquid Templates**
@@ -15,11 +18,10 @@ Add images to your markdown posts using the Jekyll responsive image tag:
 For more control in HTML templates:
 
 ```liquid
-{% responsive_image 
-   path: assets/images/vietnam-beach.jpg 
-   alt: "Beautiful beach in Vietnam" 
-   caption: "Pristine beaches of Phu Quoc Island"
-   class: "hero-image" %}
+{% include responsive-image.html 
+   src="assets/images/vietnam-beach.jpg" 
+   alt="Beautiful beach in Vietnam" 
+   caption="Pristine beaches of Phu Quoc Island" %}
 ```
 
 ### **Parameters Available:**

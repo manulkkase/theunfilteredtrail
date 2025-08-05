@@ -1,38 +1,36 @@
-<!-- Responsive Image Template with Netlify Image CDN -->
+<!-- Simple Responsive Image Template (No Plugin Required) -->
 <figure class="responsive-image">
   <picture>
     {% comment %} WebP sources using Netlify Image CDN {% endcomment %}
     <source 
-      srcset="/.netlify/images?url={{ original.path | url_encode }}&w=320&fm=webp&q=85 320w,
-              /.netlify/images?url={{ original.path | url_encode }}&w=640&fm=webp&q=85 640w,
-              /.netlify/images?url={{ original.path | url_encode }}&w=1280&fm=webp&q=85 1280w,
-              /.netlify/images?url={{ original.path | url_encode }}&w=1920&fm=webp&q=85 1920w"
+      srcset="/.netlify/images?url={{ include.src | url_encode }}&w=320&fm=webp&q=85 320w,
+              /.netlify/images?url={{ include.src | url_encode }}&w=640&fm=webp&q=85 640w,
+              /.netlify/images?url={{ include.src | url_encode }}&w=1280&fm=webp&q=85 1280w,
+              /.netlify/images?url={{ include.src | url_encode }}&w=1920&fm=webp&q=85 1920w"
       sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px"
       type="image/webp">
     
     {% comment %} JPEG sources using Netlify Image CDN {% endcomment %}
     <source 
-      srcset="/.netlify/images?url={{ original.path | url_encode }}&w=320&fm=jpg&q=85 320w,
-              /.netlify/images?url={{ original.path | url_encode }}&w=640&fm=jpg&q=85 640w,
-              /.netlify/images?url={{ original.path | url_encode }}&w=1280&fm=jpg&q=85 1280w,
-              /.netlify/images?url={{ original.path | url_encode }}&w=1920&fm=jpg&q=85 1920w"
+      srcset="/.netlify/images?url={{ include.src | url_encode }}&w=320&fm=jpg&q=85 320w,
+              /.netlify/images?url={{ include.src | url_encode }}&w=640&fm=jpg&q=85 640w,
+              /.netlify/images?url={{ include.src | url_encode }}&w=1280&fm=jpg&q=85 1280w,
+              /.netlify/images?url={{ include.src | url_encode }}&w=1920&fm=jpg&q=85 1920w"
       sizes="(max-width: 320px) 100vw, (max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px">
     
     {% comment %} Fallback img element {% endcomment %}
     <img 
-      src="/.netlify/images?url={{ original.path | url_encode }}&w=1280&fm=jpg&q=85" 
-      alt="{{ alt | default: 'Travel photo from The Unfiltered Trail' }}"
-      width="{{ original.width }}"
-      height="{{ original.height }}"
+      src="/.netlify/images?url={{ include.src | url_encode }}&w=1280&fm=jpg&q=85" 
+      alt="{{ include.alt | default: 'Travel photo from The Unfiltered Trail' }}"
       loading="lazy"
       decoding="async"
       class="responsive-image__img"
-      {% if caption %}aria-describedby="caption-{{ original.basename }}"{% endif %}>
+      {% if include.caption %}aria-describedby="caption-{{ include.src | replace: '/', '-' | replace: '.', '-' }}"{% endif %}>
   </picture>
   
-  {% if caption %}
-    <figcaption id="caption-{{ original.basename }}" class="responsive-image__caption">
-      {{ caption }}
+  {% if include.caption %}
+    <figcaption id="caption-{{ include.src | replace: '/', '-' | replace: '.', '-' }}" class="responsive-image__caption">
+      {{ include.caption }}
     </figcaption>
   {% endif %}
 </figure>
