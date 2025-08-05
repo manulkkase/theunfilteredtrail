@@ -7,13 +7,13 @@ category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/4084/5095982286_469a5123c3.jpg
 excerpt: ""
 ---
- **A Vietnamese Café Is Not Just a Coffee Shop: What "Cà Phê Sữa Đá" Really Means!**
+ A Vietnamese Café Is Not Just a Coffee Shop: What "Cà Phê Sữa Đá" Really Means!
 
 
 
 
 
-**More Than a Drink — It's Where Life Happens**
+More Than a Drink — It's Where Life Happens
 
 
 
