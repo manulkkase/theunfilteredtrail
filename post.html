@@ -97,8 +97,6 @@
             <div class="post-share" style="margin: 3rem 0; text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 16px;">
                 <h3 style="margin-bottom: 1rem; color: var(--primary);">Share this post</h3>
                 <div class="share-buttons">
-                    <button id="shareInstagram" class="btn btn-secondary" style="margin: 0.5rem;">Share on Instagram</button>
-                    <button id="shareFacebook" class="btn btn-secondary" style="margin: 0.5rem;">Share on Facebook</button>
                     <button id="copyLink" class="btn btn-secondary" style="margin: 0.5rem;">Copy Link</button>
                 </div>
             </div>
@@ -116,11 +114,6 @@
                 <div class="footer-section">
                     <h4>The Unfiltered Trail</h4>
                     <p>Real travel guides for Seoul and Saigon adventures. No fluff, just the good stuff.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Twitter">🐦</a>
-                        <a href="#" aria-label="Facebook">📘</a>
-                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -317,14 +310,6 @@
                 const url = window.location.href;
                 const title = post.frontmatter.title || 'Check out this post';
                 
-                document.getElementById('shareInstagram').onclick = () => {
-                    // Open Instagram directly in new tab/window
-                    window.open('https://www.instagram.com/', '_blank');
-                };
-                
-                document.getElementById('shareFacebook').onclick = () => {
-                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
-                };
                 
                 document.getElementById('copyLink').onclick = () => {
                     navigator.clipboard.writeText(url).then(() => {
