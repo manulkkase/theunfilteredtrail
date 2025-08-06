@@ -39,13 +39,9 @@ Today, we’re diving deep into the heart of Vietnamese coffee culture—from it
 
 Forget your fancy espresso machine or pour-over kit. In Vietnam, coffee is born from a simple metal filter called a **Phin**. It sits directly on top of your glass. You add coarsely ground robusta coffee, pour in hot water, and then you wait… and wait… and wait. The dark, rich coffee drips with mesmerising slowness, one drop at a time.  
 
-<img src="https://live.staticflickr.com/2948/15490315536_0ef502af70.jpg" 
-     style="max-width: 100%; height: auto; display: block; margin: 0 auto;" 
-     alt="Vietnamese coffee brewing with Phin filter"/>
-<p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 5px;">
-  Source: Flickr
-</p>
+![Vietnamese coffee brewing with Phin filter](https://live.staticflickr.com/2948/15490315536_0ef502af70.jpg)
 
+*Source: Flickr*
 
 
 This isn't just for show; it's a ritual. The slow drip forces you to pause. It’s in these moments of waiting that conversations flow and the laid-back café atmosphere is truly born. The rich, earthy aroma that fills the air is just the beginning. <br><br><br><br>
@@ -62,12 +58,9 @@ So, what is this legendary drink? **Cà Phê Sữa Đá** (pronounced *'gah-feh 
 
 
 
-<img src="https://live.staticflickr.com/8388/8461832750_d14362760c.jpg" 
-     style="max-width: 100%; height: auto; display: block; margin: 0 auto;" 
-     alt="Vietnamese iced coffee"/>
-<p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 5px;">
-  Source: Flickr
-</p>
+![Vietnamese iced coffee](https://live.staticflickr.com/8388/8461832750_d14362760c.jpg)
+
+*Source: Flickr*
 
 Once the Phin has finished its slow drip, you vigorously stir the intensely dark coffee into the layer of condensed milk waiting at the bottom of the glass. Then, you pour the mixture over a tall glass packed with ice. The result? A drink that is both a powerful caffeine kick and a creamy, caramel-like dessert. It's strong enough to wake you up and sweet enough to make you smile.  <br><br><br><br>
 
@@ -84,13 +77,9 @@ Once the Phin has finished its slow drip, you vigorously stir the intensely dark
 
 
 Ever just sat at a café and watched life unfold? That is the absolute essence of a Vietnamese café. They are buzzing hubs of activity from dawn till dusk. You'll see grandfathers reading the paper, students studying, and business people closing deals on their phones—all sharing the same energetic space. 
-<img src="https://live.staticflickr.com/65535/52931331663_2657551983.jpg" 
-     style="max-width: 100%; height: auto; display: block; margin: 0 auto;" 
-     alt="Roadside cafe in downtown Ca Mau"/>
-<p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 5px;">
-  Source: Flickr
-</p>
+![Roadside cafe in downtown Ca Mau](https://live.staticflickr.com/65535/52931331663_2657551983.jpg)
 
+*Source: Flickr*<br><br>
 But more importantly, these cafés are built for connection. It’s not uncommon to see strangers sharing a table and striking up a conversation. Unlike the "grab-and-go" culture we often see, Vietnamese cafés are designed for lingering. No one will ever rush you out the door. It’s a low-key party that never stops. <br><br><br><br>
 
 
@@ -120,13 +109,10 @@ For context, back home in a café in Sydney, Melbourne, or Brisbane, you could e
 
 
 
-If you find yourself in Vietnam (or even a great Vietnamese café in Australia), please promise me you'll do this:
-<img src="https://live.staticflickr.com/1867/43579453555_1271722c41.jpg" 
-     style="max-width: 100%; height: auto; display: block; margin: 0 auto;" 
-     alt="Vietnamese coffee iced black coffee"/>
-<p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 5px;">
-  Source: Flickr
-</p>
+If you find yourself in Vietnam (or even a great Vietnamese café in Australia), please promise me you'll do this:<br>
+![Vietnamese coffee iced black coffee](https://live.staticflickr.com/1867/43579453555_1271722c41.jpg)
+
+*Source: Flickr*
 
 Don't just order and drink. **Sit down and wait for the phin to drip.** Listen to the sounds of the street and the chatter around you. Stir your coffee slowly, letting the ice melt just a little to perfectly dilute the strength. Watch the world go by.
 
