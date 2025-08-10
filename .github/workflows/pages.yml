@@ -19,40 +19,23 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout main repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: main-repo
-
-      - name: Checkout image repository
-        uses: actions/checkout@v4
-        with:
-          repository: manulkkase/my-ai-blog-studio
-          token: ${{ secrets.PAT }}
-          path: image-repo
-          
-      - name: Move images to main repository
-        run: |
-          mkdir -p main-repo/images
-          if [ -d "image-repo/images" ]; then
-            mv image-repo/images/* main-repo/images/
-          fi
-
+        
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
-          working-directory: ./main-repo
-
+          
       - name: Build with Jekyll
-        run: bundle exec jekyll build
-        working-directory: ./main-repo
+        run: |
+          bundle exec jekyll build
         env:
           JEKYLL_ENV: production
           
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./main-repo/_site
+          publish_dir: ./_site
