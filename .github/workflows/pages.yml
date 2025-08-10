@@ -37,19 +37,17 @@ jobs:
           if [ -d "image-repo/images" ]; then
             mv image-repo/images/* main-repo/images/
           fi
-          cd main-repo
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
-          working-directory: './main-repo'
+          working-directory: ./main-repo
 
       - name: Build with Jekyll
-        run: |
-          cd main-repo
-          bundle exec jekyll build
+        run: bundle exec jekyll build
+        working-directory: ./main-repo
         env:
           JEKYLL_ENV: production
           
