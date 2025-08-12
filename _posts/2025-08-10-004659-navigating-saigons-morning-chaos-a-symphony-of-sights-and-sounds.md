@@ -1,8 +1,8 @@
 ---
 title: "### Navigating Saigon's Morning Chaos: A Symphony of Sights and Sounds"
 date: 2025-08-10
-category: "City Vibes & Night-life"
-featured_image: "images/saigons-morning-chaos-004653.jpg"
+category: City Vibes & Night-life
+featured_image: https://live.staticflickr.com/3855/14561801561_8600d7904d.jpg
 ---
 
 #### Unveiling the Pulse of Ho Chi Minh City in Its Most Authentic Form
