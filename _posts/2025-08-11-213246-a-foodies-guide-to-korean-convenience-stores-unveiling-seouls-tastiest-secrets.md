@@ -1,8 +1,9 @@
 ---
-title: "### A Foodie's Guide to Korean Convenience Stores: Unveiling Seoul's Tastiest Secrets"
+title: "### A Foodie's Guide to Korean Convenience Stores: Unveiling Seoul's
+  Tastiest Secrets"
 date: 2025-08-11
-category: "Street Food & Night Markets"
-featured_image: "/images/a-foodies-guide-to-korean-convenience-stores-213243.jpg"
+category: Street Food & Night Markets
+featured_image: https://live.staticflickr.com/4845/45975274954_62928ebfbd.jpg
 ---
 
 #### Discover the unexpected gourmet delights that locals love, from cup noodles to samgak kimbap
