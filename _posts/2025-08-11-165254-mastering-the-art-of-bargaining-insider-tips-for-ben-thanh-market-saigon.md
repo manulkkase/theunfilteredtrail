@@ -3,7 +3,7 @@ title: "### Mastering the Art of Bargaining: Insider Tips for Ben Thanh Market,
   Saigon"
 date: 2025-08-11
 category: Street Food & Night Markets
-featured_image: /images/how-to-haggle-at-ben-thanh-market-165247.jpg
+featured_image: https://live.staticflickr.com/3036/2376469247_c43d50c6be.jpg
 ---
 
 #### From a Seoul-born, Saigon-partnered, and Australia-based family man—learn how to shop like a local and avoid common tourist traps.
