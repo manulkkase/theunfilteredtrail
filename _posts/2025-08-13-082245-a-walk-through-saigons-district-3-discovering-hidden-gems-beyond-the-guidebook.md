@@ -1,7 +1,7 @@
 ---
 title: "### A Walk Through Saigon's District 3: Discovering Hidden Gems Beyond
   the Guidebook"
-date: 2025-08-13
+date: 2025-08-11T21:00:00.000Z
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/65535/52867689797_fc03e1dcc0.jpg
 ---
