@@ -1,8 +1,8 @@
 ---
 title: "### Mastering the Seoul Subway System: Navigate Like a Local"
 date: 2025-08-13
-category: "Budget Hacks & Transport"
-featured_image: "/images/mastering-the-seoul-subway-system-213332.jpg"
+category: Budget Hacks & Transport
+featured_image: https://pixabay.com/get/gd3e2453392d2ca2e23bc3f271f0781d30ba06a4a32ff9adbd5666c76cb13bfe6d7b9060373b214048eb72656229520f310302fae2817b109b5cf99ae140c6e18_1280.jpg
 ---
 
 #### From a Seoul Native Who’s Ridden Every Line
