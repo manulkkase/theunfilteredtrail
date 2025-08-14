@@ -4,12 +4,7 @@ title: About The Curious Wanderer | The Unfiltered Trail
 description: Meet the person behind The Unfiltered Trail. From Aussie backpacker to Seoul-Saigon local insider.
 ---
 
-<!-- Ad Space -->
-<div class="container">
-    <div class="ad-space header">
-        <small>Advertisement Space (728x90)</small>
-    </div>
-</div>
+
 
 <section class="container" style="padding-top: 2rem;">
     <header class="post-header">
