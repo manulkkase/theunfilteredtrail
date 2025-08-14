@@ -1,12 +1,11 @@
 ---
-title: "Title: Unwrapping Saigon's Best Bánh Mì: A Family's Guide to Authentic
-  Flavors"
+title: "Unwrapping Saigon's Best Bánh Mì: A Family's Guide to Authentic Flavors"
 date: 2025-08-10
 category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/3805/10496939135_ce5e28d4fb.jpg
 ---
 
-Subtitle: From the bustling streets to the secrets only locals know—discover where to find the best Vietnamese sandwich in Ho Chi Minh City.
+From the bustling streets to the secrets only locals know—discover where to find the best Vietnamese sandwich in Ho Chi Minh City.
 
 ---
 
