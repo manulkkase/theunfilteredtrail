@@ -1,11 +1,11 @@
 ---
-title: "Title: Discovering Seochon Village: Seoul's Hidden Gem Beyond Gyeongbokgung"
+title: "Discovering Seochon Village: Seoul's Hidden Gem Beyond Gyeongbokgung"
 date: 2025-08-12
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/65535/49994205427_8e2ca90dfa.jpg
 ---
 
-Subtitle: Dive deep into one of Seoul's quietest neighborhoods where slow travel meets authentic experiences.
+Dive deep into one of Seoul's quietest neighborhoods where slow travel meets authentic experiences.
 
 Every guidebook tells you to visit Gyeongbokgung Palace, but let me take you on a stroll down the memory lane of my childhood, exploring the hidden alleys of Seochon Village. Nestled to the west of the palace, this area promises a serene escape from the bustling tourist spots and a peek into the life of Seoul’s locals.
 
