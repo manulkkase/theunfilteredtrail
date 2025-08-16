@@ -1,8 +1,9 @@
 ---
-title: "### Discovering the Mekong Delta: An Authentic Day Trip Beyond the Tourist Traps"
+title: "### Discovering the Mekong Delta: An Authentic Day Trip Beyond the
+  Tourist Traps"
 date: 2025-08-16
-category: "City Vibes & Night-life"
-featured_image: "/images/an-authentic-day-trip-to-the-mekong-delta-from-ho-chi-minh-city-213105.jpg"
+category: City Vibes & Night-life
+featured_image: https://live.staticflickr.com/8849/17811712978_7a0c57806c.jpg
 ---
 
 **Subtle Secrets and Genuine Gems from Ho Chi Minh City to the Heart of Local Life**
