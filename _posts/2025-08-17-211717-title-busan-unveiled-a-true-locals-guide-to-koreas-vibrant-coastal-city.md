@@ -1,11 +1,10 @@
 ---
-title: "Title: Busan Unveiled: A True Local's Guide to Korea's Vibrant Coastal City"
+title: "Busan Unveiled: A True Local's Guide to Korea's Vibrant Coastal City"
 date: 2025-08-17
-category: "Beaches, Bays & Islands"
-featured_image: "/images/a-travel-guide-to-busan-south-koreas-coastal-city-211714.jpg"
+category: Beaches, Bays & Islands
+featured_image: https://live.staticflickr.com/8435/7857402708_8cdc1a6d45.jpg
 ---
-
-Subtitle: From hidden beaches to the best seafood spots, discover Busan through the eyes of someone who's lived it.
+From hidden beaches to the best seafood spots, discover Busan through the eyes of someone who's lived it.
 
 Growing up, my summers were synonymous with the salty air and vibrant life of Busan, South Korea's bustling coastal city. While most tourists flock to Haeundae Beach, let me share with you the city's lesser-known gems that locals cherish.
 
@@ -31,4 +30,4 @@ Traveling to and within Busan is a breeze with the KTX train connecting major ci
 
 Busan is a city of vibrant contrasts and serene escapes, with much more to offer than what meets the eye. Through this guide, I hope to help you uncover the true spirit of Busan, much like the locals do—beyond the usual tourist paths and into the heart of its culture and community. Enjoy your journey to this dynamic coastal city, where each corner holds a story and every meal is a celebration of the sea.
 
-#Busan #TravelGuide #CoastalEscape #HaeundaeBeach #GamcheonCultureVillage #JagalchiFishMarket #BusanFood #KTXTrain
+\#Busan #TravelGuide #CoastalEscape #HaeundaeBeach #GamcheonCultureVillage #JagalchiFishMarket #BusanFood #KTXTrain
