@@ -1,8 +1,9 @@
 ---
-title: "### Discovering Ho Chi Minh City's Past: A Respectful Journey Through Vietnam War History Sites"
+title: "### Discovering Ho Chi Minh City's Past: A Respectful Journey Through
+  Vietnam War History Sites"
 date: 2025-08-18
-category: "City Vibes & Night-life"
-featured_image: "/images/a-guide-to-vietnam-war-history-sites-in-ho-chi-minhcity-211648.jpg"
+category: City Vibes & Night-life
+featured_image: https://live.staticflickr.com/4478/26256468479_b1c2c28f42.jpg
 ---
 
 #### Every guidebook highlights the War Remnants Museum, but according to my partner's family, the real stories are often found in the details they share.
