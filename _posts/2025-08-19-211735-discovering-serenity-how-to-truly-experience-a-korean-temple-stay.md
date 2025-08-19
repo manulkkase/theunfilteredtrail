@@ -1,8 +1,8 @@
 ---
 title: "### Discovering Serenity: How to Truly Experience a Korean Temple Stay"
 date: 2025-08-19
-category: "K-Culture & Palaces"
-featured_image: "/images/an-authentic-korean-temple-stay-experience-211733.jpg"
+category: K-Culture & Palaces
+featured_image: https://live.staticflickr.com/5576/14415413940_507e30cefd.jpg
 ---
 
 #### Unveil the profound calm beyond the tourist path with insights from a Seoul native
