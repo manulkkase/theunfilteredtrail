@@ -2,6 +2,7 @@
 layout: post
 title: 'A Vietnamese Café Is Not Just a Coffee Shop: What "Cà Phê Sữa Đá" Really
   Means!'
+permalink: /vietnamese-iced-coffee-culture/
 date: 2025-08-05T11:23:36.355Z
 category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/4084/5095982286_469a5123c3.jpg
