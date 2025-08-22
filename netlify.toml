@@ -6,6 +6,8 @@
 [build.environment]
   # Ruby version
   RUBY_VERSION = "3.2.0"
+  # Set Jekyll environment to production
+  JEKYLL_ENV = "production"
 
 # Netlify Image Transformations (Built-in)
 # Images will be automatically optimized via Netlify's CDN
