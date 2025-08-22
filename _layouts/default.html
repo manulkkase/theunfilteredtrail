@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 1. 디자인에 필요한 폰트와 CSS (유지) -->
+    <!-- 1. 디자인에 필요한 폰트와 CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 
-    <!-- 2. Netlify CMS 스크립트 (유지) -->
+    <!-- 2. Netlify CMS 스크립트 -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- 3. 구글 애드센스 스크립트 (유지) -->
+    <!-- 3. 구글 애드센스 스크립트 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8105671322406442" crossorigin="anonymous"></script>
 
-    <!-- 4. Jekyll SEO 플러그인 태그 (모든 SEO 정보 담당) -->
+    <!-- 4. Jekyll SEO 플러그인 태그 -->
     {% seo %}
 
-    <!-- 5. 구글 애널리틱스 수동 삽입 (운영 환경에서만) -->
-    {% if jekyll.environment == "production" %}
+    <!-- 5. 구글 애널리틱스 강제 삽입 (조건문 제거) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,7 +26,6 @@
 
       gtag('config', '{{ site.google_analytics }}');
     </script>
-    {% endif %}
 </head>
 <body>
     <header>
