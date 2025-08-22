@@ -1,11 +1,10 @@
 ---
-title: "Title: Unveiling Phu Quoc: A Family Guide to Vietnam's Hidden Gem"
+title: "Unveiling Phu Quoc: A Family Guide to Vietnam's Hidden Gem"
 date: 2025-08-22
-category: "Beaches, Bays & Islands"
-featured_image: "/images/a-travel-guide-to-phu-quoc-vietnams-rising-island-paradise-211633.jpg"
+category: Beaches, Bays & Islands
+featured_image: https://live.staticflickr.com/4671/28257246209_35e3eb705e.jpg
 ---
-
-Subtitle: From starlit beaches to savory street eats, here's how to truly savor this island paradise, away from the typical tourist trails.
+From starlit beaches to savory street eats, here's how to truly savor this island paradise, away from the typical tourist trails.
 
 Every guidebook pits Phu Quoc against Bali, but let me share a secret that my partner, a true Saigoneer, whispered to me: Phu Quoc is where the heart of Vietnam's island life beats the strongest. This gem offers a blend of serene beaches and vibrant cultural experiences that Bali can only dream of. Let's dive into the less trodden paths and discover the island like a local, with a few family-friendly tips along the way!
 
@@ -31,4 +30,4 @@ Getting to Phu Quoc from Australia is easier than you might think, with affordab
 
 Phu Quoc is not just another tick on the bucket list; it's a place to make lasting memories with your family, immersed in the rich tapestry of local customs and stunning natural beauty. Whether you're snorkeling in crystal-clear waters, feasting at the night market, or relaxing on a secluded beach, Phu Quoc offers a unique, enriching experience that goes beyond the typical tourist path. So pack your bags, and let's make those travel dreams a reality!
 
-#PhuQuoc #VietnamTravel #FamilyTravel #BestBeaches #IslandHopping #AffordableResorts #TravelFromAustralia #NightMarket
+\#PhuQuoc #VietnamTravel #FamilyTravel #BestBeaches #IslandHopping #AffordableResorts #TravelFromAustralia #NightMarket
