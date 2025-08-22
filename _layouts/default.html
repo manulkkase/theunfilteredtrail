@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JK6EEQ7ST"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-7JK6EEQ7ST');
+    </script>
+
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     <meta name="keywords" content="travel blog, Asia travel, Seoul, Saigon, backpacker guide, Korea, Vietnam">
     <meta name="author" content="{{ page.author | default: site.author }}">
     
-    <!-- Open Graph Tags -->
     <meta property="og:title" content="{{ page.title | default: site.title }}">
     <meta property="og:description" content="{{ page.description | default: site.description }}">
     <meta property="og:image" content="{{ page.featured_image | default: '/images/Whisk_a35f7a9c81.jpg' | absolute_url }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:type" content="website">
     
-    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.title | default: site.title }}">
     <meta name="twitter:description" content="{{ page.description | default: site.description }}">
     <meta name="twitter:image" content="{{ page.featured_image | default: '/images/Whisk_a35f7a9c81.jpg' | absolute_url }}">
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
     
-    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
-    <!-- SEO Plugin -->
     {% seo %}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8105671322406442"
-     crossorigin="anonymous"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8105671322406442" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -55,7 +59,7 @@
         </nav>
     </header>
 
-                <main>
+    <main>
         {{ content }}
     </main>
 
@@ -85,7 +89,6 @@
         </div>
     </footer>
 
-    <!-- Netlify Identity Widget -->
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
