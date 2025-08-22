@@ -1,19 +1,22 @@
 [build]
-  # Jekyll build command for production
+  # Jekyll build command
   command = "bundle install && bundle exec jekyll build"
   publish = "_site"
 
+# [핵심 수정] 모든 빌드 컨텍스트에 환경 변수를 명시적으로 설정합니다.
 [build.environment]
-  # Ruby version
   RUBY_VERSION = "3.2.0"
-  # Set Jekyll environment to production
   JEKYLL_ENV = "production"
 
-# Netlify Image Transformations (Built-in)
-# Images will be automatically optimized via Netlify's CDN
-# Use /.netlify/images/ URLs for on-the-fly transformations
+[context.production.environment]
+  JEKYLL_ENV = "production"
 
-# Redirect rules for clean URLs (Jekyll markdown files)
+[context.deploy-preview.environment]
+  JEKYLL_ENV = "production"
+
+# --- 아래는 기존 설정을 그대로 유지합니다 ---
+
+# Redirect rules for clean URLs
 [[redirects]]
   from = "/about/"
   to = "/about.html"
