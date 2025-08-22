@@ -14,8 +14,20 @@
     <!-- 3. 구글 애드센스 스크립트 (유지) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8105671322406442" crossorigin="anonymous"></script>
 
-    <!-- 4. Jekyll SEO 플러그인 태그 (모든 SEO 정보와 구글 애널리틱스를 자동으로 삽입) -->
+    <!-- 4. Jekyll SEO 플러그인 태그 (모든 SEO 정보 담당) -->
     {% seo %}
+
+    <!-- 5. 구글 애널리틱스 수동 삽입 (운영 환경에서만) -->
+    {% if jekyll.environment == "production" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
 </head>
 <body>
     <header>
