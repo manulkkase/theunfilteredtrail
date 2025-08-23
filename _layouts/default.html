@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 1. 디자인에 필요한 폰트와 CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-
+    <!-- ... (다른 meta, link, script 태그들은 그대로 둡니다) ... -->
+    
     <!-- 2. Netlify CMS 스크립트 -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
@@ -17,14 +12,14 @@
     <!-- 4. Jekyll SEO 플러그인 태그 -->
     {% seo %}
 
-    <!-- 5. 구글 애널리틱스 강제 삽입 (조건문 제거) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <!-- 5. Google Analytics (최종 버전) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JK6EEQ7ST"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', '{{ site.google_analytics }}');
+      gtag('config', 'G-7JK6EEQ7ST');
     </script>
 </head>
 <body>
