@@ -1,13 +1,12 @@
 ---
-title: "Title: Embracing the Wind and Waves: An Adventurous Travel Guide to Jeju Island"
+title: "Embracing the Wind and Waves: An Adventurous Travel Guide to Jeju Island"
 date: 2025-08-23
-category: "Beaches, Bays & Islands"
-featured_image: "/images/an-adventurous-travel-guide-to-jeju-island-south-korea-211536.jpg"
+category: Beaches, Bays & Islands
+featured_image: https://live.staticflickr.com/2926/14245126395_811c49ac2a.jpg
 ---
+From the panoramic hikes to the savory delights of Jeju black pork BBQ, follow my footsteps on this island of natural wonders.
 
-Subtitle: From the panoramic hikes to the savory delights of Jeju black pork BBQ, follow my footsteps on this island of natural wonders.
-
----
+- - -
 
 Every guidebook tells you to visit Jeju Island for its picturesque views, but let me take you beyond the postcards to where the locals truly connect with this volcanic gem. Growing up in Seoul, Jeju was our go-to retreat—an escape to a world where nature rules majestically.
 
@@ -31,8 +30,8 @@ No trip to Jeju is complete without indulging in the island's famous black pork 
 
 Seongsan Ilchulbong, or Sunrise Peak, offers a dramatic start to the day that's hard to pass up. Climbing this tuff cone at dawn rewards you with a panoramic view of the sun rising over the sea—an unforgettable spectacle. The climb is moderately easy, suitable for families, and the surrounding area is dotted with charming cafes where you can savor a warm drink after your early morning adventure.
 
----
+- - -
 
 As your insider guide, I promise that Jeju Island is more than just a scenic spot—it's a vibrant landscape filled with adventures that cater to every traveler. From the rugged trails of Hallasan to the sizzling grills of black pork BBQ, there's an abundance of experiences waiting to be discovered. Pack your bags, embrace the spirit of adventure, and let Jeju Island leave you mesmerized.
 
-#JejuIsland #VolcanicIsland #RoadTrip #HikingHallasan #OlleTrail #Waterfalls #Beaches #RentingACar #JejuBlackPorkBBQ #SeongsanIlchulbong
+\#JejuIsland #VolcanicIsland #RoadTrip #HikingHallasan #OlleTrail #Waterfalls #Beaches #RentingACar #JejuBlackPorkBBQ #SeongsanIlchulbong
