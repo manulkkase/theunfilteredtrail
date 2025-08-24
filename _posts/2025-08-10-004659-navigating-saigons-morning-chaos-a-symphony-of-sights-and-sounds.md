@@ -1,5 +1,6 @@
 ---
 title: "### Navigating Saigon's Morning Chaos: A Symphony of Sights and Sounds"
+permalink: /navigating-saigons-morning-chaos-a-symphony-of-sights-and-sounds/
 date: 2025-08-10
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/3855/14561801561_8600d7904d.jpg

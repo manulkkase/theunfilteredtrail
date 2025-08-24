@@ -1,5 +1,6 @@
 ---
 title: "Beyond the Barbed Wire: A Family’s Guide to the Korean Demilitarized Zone"
+permalink: /beyond-the-barbed-wire-a-familys-guide-to-the-korean-demilitarized-zone/
 date: 2025-08-15
 category: K-Culture & Palaces
 featured_image: https://live.staticflickr.com/4272/34723854261_8d65fa0852.jpg

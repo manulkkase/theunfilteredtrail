@@ -1,6 +1,7 @@
 ---
 title: "### Discovering Ho Chi Minh City's Past: A Respectful Journey Through
   Vietnam War History Sites"
+permalink: /discovering-ho-chi-minh-citys-past-a-respectful-journey-through-vietnam-war-history-sites/
 date: 2025-08-18
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/4478/26256468479_b1c2c28f42.jpg

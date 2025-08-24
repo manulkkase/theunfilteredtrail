@@ -1,5 +1,6 @@
 ---
 title: "Unveiling Phu Quoc: A Family Guide to Vietnam's Hidden Gem"
+permalink: /unveiling-phu-quoc-a-family-guide-to-vietnams-hidden-gem/
 date: 2025-08-22
 category: Beaches, Bays & Islands
 featured_image: https://live.staticflickr.com/4671/28257246209_35e3eb705e.jpg

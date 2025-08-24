@@ -1,6 +1,7 @@
 ---
 title: "The Art of Tailoring in Hoi An: A Personal Journey Through Fabric and
   Scissors"
+permalink: /the-art-of-tailoring-in-hoi-an-a-personal-journey-through-fabric-and-scissors/
 date: 2025-08-20
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/65535/50744930966_cb073e297e.jpg

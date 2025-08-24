@@ -1,5 +1,6 @@
 ---
 title: "Unwrapping Saigon's Best Bánh Mì: A Family's Guide to Authentic Flavors"
+permalink: /unwrapping-saigons-best-banh-mi-a-familys-guide-to-authentic-flavors/
 date: 2025-08-10
 category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/3805/10496939135_ce5e28d4fb.jpg

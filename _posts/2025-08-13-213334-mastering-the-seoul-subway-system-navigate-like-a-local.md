@@ -1,5 +1,6 @@
 ---
 title: "### Mastering the Seoul Subway System: Navigate Like a Local"
+permalink: /mastering-the-seoul-subway-system-navigate-like-a-local/
 date: 2025-08-13
 category: Budget Hacks & Transport
 featured_image: https://live.staticflickr.com/65535/54617501954_d710af618a.jpg

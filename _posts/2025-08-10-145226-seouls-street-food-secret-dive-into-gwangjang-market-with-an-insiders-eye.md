@@ -1,6 +1,7 @@
 ---
 title: "### Seoul's Street Food Secret: Dive into Gwangjang Market with an
   Insider's Eye"
+permalink: /seouls-street-food-secret-dive-into-gwangjang-market-with-an-insiders-eye/
 date: 2025-08-10
 category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/65535/49416954396_41528f964c_c.jpg

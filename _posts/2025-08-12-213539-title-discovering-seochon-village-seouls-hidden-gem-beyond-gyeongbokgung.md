@@ -1,5 +1,6 @@
 ---
 title: "Discovering Seochon Village: Seoul's Hidden Gem Beyond Gyeongbokgung"
+permalink: /discovering-seochon-village-seouls-hidden-gem-beyond-gyeongbokgung/
 date: 2025-08-12
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/65535/49994205427_8e2ca90dfa.jpg

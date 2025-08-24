@@ -1,6 +1,7 @@
 ---
 title: "### Mastering the Art of Bargaining: Insider Tips for Ben Thanh Market,
   Saigon"
+permalink: /mastering-the-art-of-bargaining-insider-tips-for-ben-thanh-market-saigon/
 date: 2025-08-11
 category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/3036/2376469247_c43d50c6be.jpg

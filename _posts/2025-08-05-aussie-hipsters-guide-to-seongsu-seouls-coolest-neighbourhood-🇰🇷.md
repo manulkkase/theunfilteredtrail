@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Aussie Hipster's Guide to Seongsu: Seoul's Coolest Neighbourhood 🇰🇷"
+permalink: /aussie-hipsters-guide-to-seongsu-seouls-coolest-neighbourhood/
 date: 2025-08-05T07:21:53.648Z
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/5593/30992535732_ce6a425e90_c.jpg

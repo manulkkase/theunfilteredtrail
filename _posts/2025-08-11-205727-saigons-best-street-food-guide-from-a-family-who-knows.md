@@ -1,5 +1,6 @@
 ---
 title: "### Saigon's Best Street Food Guide: From a Family Who Knows"
+permalink: /saigons-best-street-food-guide-from-a-family-who-knows/
 date: 2025-08-11
 category: Street Food & Night Markets
 featured_image: https://live.staticflickr.com/4369/36242900441_a4fbf55b33.jpg

@@ -1,6 +1,7 @@
 ---
 title: "### Discovering the Mekong Delta: An Authentic Day Trip Beyond the
   Tourist Traps"
+permalink: /discovering-the-mekong-delta-an-authentic-day-trip-beyond-the-tourist-traps/
 date: 2025-08-16
 category: City Vibes & Night-life
 featured_image: https://live.staticflickr.com/8849/17811712978_7a0c57806c.jpg

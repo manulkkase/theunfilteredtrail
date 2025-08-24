@@ -1,5 +1,6 @@
 ---
 title: "Busan Unveiled: A True Local's Guide to Korea's Vibrant Coastal City"
+permalink: /busan-unveiled-a-true-locals-guide-to-koreas-vibrant-coastal-city/
 date: 2025-08-17
 category: Beaches, Bays & Islands
 featured_image: https://live.staticflickr.com/8435/7857402708_8cdc1a6d45.jpg

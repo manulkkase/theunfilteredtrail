@@ -1,5 +1,6 @@
 ---
 title: "### Cherry Blossoms Off the Beaten Path: Experience Spring in Korea Like a Local"
+permalink: /cherry-blossoms-off-the-beaten-path-experience-spring-in-korea-like-a-local/
 date: 2025-08-21
 category: "K-Culture & Palaces"
 featured_image: "/images/a-guide-to-cherry-blossom-season-in-south-korea-211658.jpg"

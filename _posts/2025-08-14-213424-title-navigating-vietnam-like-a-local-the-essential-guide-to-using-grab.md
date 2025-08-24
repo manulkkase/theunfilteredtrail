@@ -1,5 +1,6 @@
 ---
 title: "Navigating Vietnam like a Local: The Essential Guide to Using Grab"
+permalink: /navigating-vietnam-like-a-local-the-essential-guide-to-using-grab/
 date: 2025-08-14
 category: Budget Hacks & Transport
 featured_image: https://live.staticflickr.com/65535/50292121251_2d95d43b93.jpg
