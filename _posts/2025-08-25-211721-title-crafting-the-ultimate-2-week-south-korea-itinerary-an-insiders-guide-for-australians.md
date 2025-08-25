@@ -1,11 +1,11 @@
 ---
-title: "**Title:** Crafting the Ultimate 2-Week South Korea Itinerary: An Insider’s Guide for Australians"
+title: "Crafting the Ultimate 2-Week South Korea Itinerary: An Insider’s Guide
+  for Australians"
 date: 2025-08-25
-category: "Budget Hacks & Transport"
-featured_image: "/images/a-2-week-south-korea-itinerary-for-australians-211719.jpg"
+category: Budget Hacks & Transport
+featured_image: https://live.staticflickr.com/4375/35639960233_b623d7a997.jpg
 ---
-
-**Subtitle:** From Seoul to Busan: Navigate your journey with insights from a Seoul native, tailored for Aussie families.
+From Seoul to Busan: Navigate your journey with insights from a Seoul native, tailored for Aussie families.
 
 Every guidebook might start you off at the bustling streets of Myeongdong, but let me take you along the path I walked as a child, where the true heart of Seoul beats. Growing up in the capital city of South Korea, I was always enchanted by the less trodden paths that each hold their own unique tales. Now, let's embark on this journey together, ensuring your two weeks in South Korea are not just memorable but also seamless and family-friendly.
 
@@ -35,4 +35,4 @@ Return to Seoul and spend your last days picking up souvenirs in Insadong, where
 
 South Korea offers an array of experiences that go beyond the typical tourist itinerary. With this guide, you’re set to explore the depths of Korean culture, history, and scenery—all while keeping the kids engaged and making the logistics as smooth as possible. Enjoy your journey down the road less traveled, and cherish the memories you’ll make in my homeland!
 
-#SouthKoreaItinerary #TravelFromAustralia #SeoulItinerary #BusanGuide #FamilyTravel #KTXBooking #TravelBudgetAUD
+\#SouthKoreaItinerary #TravelFromAustralia #SeoulItinerary #BusanGuide #FamilyTravel #KTXBooking #TravelBudgetAUD
