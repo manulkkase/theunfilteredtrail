@@ -1,8 +1,8 @@
 ---
 title: "### Surviving Seoul's Winter: An Aussie's Guide to Staying Warm and Stylish"
 date: 2025-08-26
-category: "City Vibes & Night-life"
-featured_image: "/images/a-winter-packing-guide-for-seoul-for-australians-211624.jpg"
+category: City Vibes & Night-life
+featured_image: https://live.staticflickr.com/150/386248611_f2fda638ca.jpg
 ---
 
 #### From one expat to another: everything Australians need to know about braving the cold in Korea.
