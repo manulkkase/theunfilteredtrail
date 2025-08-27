@@ -1,21 +1,21 @@
 ---
-title: "Title: Stretching Your Dollar in Vietnam: An Aussie's Guide to Savvy Travel"
+title: "Stretching Your Dollar in Vietnam: An Aussie's Guide to Savvy Travel"
 date: 2025-08-27
-category: "Budget Hacks & Transport"
-featured_image: "/images/a-guide-to-vietnam-travel-costs-for-australians-211655.jpg"
+category: Budget Hacks & Transport
+featured_image: https://live.staticflickr.com/4652/39796547044_fb19d7ca6c.jpg
 ---
-
-Subtitle: From the streets of Saigon to the hills of Hanoi, here's how to enjoy Vietnam without breaking the bank.
+From the streets of Saigon to the hills of Hanoi, here's how to enjoy Vietnam without breaking the bank.
 
 Every guidebook will give you the basics, but let me share some wisdom from my family's experience and my partner's local insights to help you navigate Vietnam's costs effectively. Having a partner from Saigon has given me an insider's view into truly stretching each dollar, making this guide as authentic as it gets.
 
 ### 📊 Understand Your Daily Budget
 
 Let's start with a clear picture of what you might spend daily. Vietnam is renowned for its affordability, especially compared to Australian prices, but knowing the details helps in planning. A typical day can vary greatly depending on your travel style, but here's a basic breakdown in AUD:
-- **Accommodation**: Budget hostels can range from $10 to $20 per night, while mid-range hotels might set you back $20 to $50. For a more luxurious stay, $50-$100 can get you a room in a high-end hotel or resort.
-- **Food**: Street food is a delicious bargain, with meals costing between $1 to $5. Sit-down restaurants are also reasonable, where a hearty meal can cost $5 to $15.
-- **Transport**: Local buses and the metro in cities like Hanoi and Ho Chi Minh City are incredibly cheap, around $0.30 to $0.50 per journey. For intercity travel, trains and buses can cost anywhere from $6 to $30, depending on the distance and class of travel.
-- **Entertainment and Sightseeing**: Entrance fees for major attractions typically range from $0.50 to $5. My partner always reminds tourists that local markets and many temples are free to explore!
+
+* **Accommodation**: Budget hostels can range from $10 to $20 per night, while mid-range hotels might set you back $20 to $50. For a more luxurious stay, $50-$100 can get you a room in a high-end hotel or resort.
+* **Food**: Street food is a delicious bargain, with meals costing between $1 to $5. Sit-down restaurants are also reasonable, where a hearty meal can cost $5 to $15.
+* **Transport**: Local buses and the metro in cities like Hanoi and Ho Chi Minh City are incredibly cheap, around $0.30 to $0.50 per journey. For intercity travel, trains and buses can cost anywhere from $6 to $30, depending on the distance and class of travel.
+* **Entertainment and Sightseeing**: Entrance fees for major attractions typically range from $0.50 to $5. My partner always reminds tourists that local markets and many temples are free to explore!
 
 ### 🍲 Dive Into Affordable Culinary Delights
 
@@ -40,4 +40,4 @@ Vietnam is a country rich in experiences but doesn’t require a fortune to expl
 
 Safe travels, and remember, the best experiences often come from the roads less traveled!
 
-#VietnamTravel #BudgetGuide #AussieTravellers #MoneySavingTips #FoodPrices #AccommodationCosts #TransportTips
+\#VietnamTravel #BudgetGuide #AussieTravellers #MoneySavingTips #FoodPrices #AccommodationCosts #TransportTips
