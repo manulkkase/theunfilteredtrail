@@ -2,6 +2,7 @@
 title: "Embracing the Wind and Waves: An Adventurous Travel Guide to Jeju Island"
 date: 2025-08-23
 category: Beaches, Bays & Islands
+permalink: /blog/2025-08-23-211538/
 featured_image: https://live.staticflickr.com/2926/14245126395_811c49ac2a.jpg
 ---
 From the panoramic hikes to the savory delights of Jeju black pork BBQ, follow my footsteps on this island of natural wonders.

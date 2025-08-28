@@ -2,6 +2,7 @@
 title: "Stretching Your Dollar in Vietnam: An Aussie's Guide to Savvy Travel"
 date: 2025-08-27
 category: Budget Hacks & Transport
+permalink: /blog/2025-08-27-211657/
 featured_image: https://live.staticflickr.com/4652/39796547044_fb19d7ca6c.jpg
 ---
 From the streets of Saigon to the hills of Hanoi, here's how to enjoy Vietnam without breaking the bank.

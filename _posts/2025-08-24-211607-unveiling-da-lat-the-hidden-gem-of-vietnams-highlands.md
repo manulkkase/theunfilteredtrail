@@ -2,6 +2,7 @@
 title: "### Unveiling Da Lat: The Hidden Gem of Vietnam's Highlands"
 date: 2025-08-24
 category: "Mountains & Rice Terraces"
+permalink: /blog/2025-08-24-211607/
 featured_image: "/images/a-guide-to-da-lat-the-french-alps-of-vietnam-211604.jpg"
 ---
 

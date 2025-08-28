@@ -3,6 +3,7 @@ title: "Crafting the Ultimate 2-Week South Korea Itinerary: An Insider’s Guide
   for Australians"
 date: 2025-08-25
 category: Budget Hacks & Transport
+permalink: /blog/2025-08-25-211721/
 featured_image: https://live.staticflickr.com/4375/35639960233_b623d7a997.jpg
 ---
 From Seoul to Busan: Navigate your journey with insights from a Seoul native, tailored for Aussie families.
