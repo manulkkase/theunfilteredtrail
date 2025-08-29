@@ -8,8 +8,6 @@ featured_image: /images/a-beginners-guide-to-the-korean-bbq-experience-211639.jp
 ---
 
 
-- - -
-
 I must have been seven years old. It was a bitterly cold Seoul winter, the kind where your breath turns to instant frost. My dad took me by the hand and led me into a tiny, steamy restaurant that smelled of charcoal and sizzling pork. He sat me down in front of a roaring grill and, with a serious look, placed a strip of glistening pork belly—*samgyeopsal*—on the heat. "Watch," he said. He showed me how to wait for the perfect crispy char, how to snip it with scissors, and how to build my first *ssam*: a lettuce wrap with the meat, a dab of tangy paste, and a sliver of grilled garlic. That bite wasn't just food; it was an initiation.
 
 Forget the tourist guides. I'm going to share the real rules of Korean BBQ—the ones passed down from fathers to sons, from *ajummas* to loyal customers.
