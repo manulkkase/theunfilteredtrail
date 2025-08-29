@@ -8,7 +8,7 @@ featured_image: https://live.staticflickr.com/4375/35639960233_b623d7a997.jpg
 ---
 Forget the Tourist Traps: My Real 2-Week Korea Itinerary for Aussie Families
 
-When my Australian partner’s parents visited Seoul for the first time, they had a checklist torn from a guidebook: palaces, towers, and trendy restaurants. After a long morning exploring Gyeongbok Palace, they were ready for the fancy tourist-recommended lunch spot. Instead, I pulled them into a tiny, steamy restaurant tucked away in an alley, filled with local office workers slurping down bowls of soup. My father-in-law looked skeptical, but after his first spoonful of hearty *dwaeji gukbap* (pork and rice soup), his face lit up. That simple, $9 meal became one of his favourite memories of the trip.
+When my partner’s parents visited Seoul for the first time, they had a checklist torn from a guidebook: palaces, towers, and trendy restaurants. After a long morning exploring Gyeongbok Palace, they were ready for the fancy tourist-recommended lunch spot. Instead, I pulled them into a tiny, steamy restaurant tucked away in an alley, filled with local office workers slurping down bowls of soup. My father-in-law looked skeptical, but after his first spoonful of hearty *dwaeji gukbap* (pork and rice soup), his face lit up. That simple, $9 meal became one of his favourite memories of the trip.
 
 That's the Korea I want you to experience—not the polished version for tourists, but the authentic, heartwarming, and often cheaper, version that locals love. This itinerary is designed to give your family those unforgettable *gukbap* moments.
 
