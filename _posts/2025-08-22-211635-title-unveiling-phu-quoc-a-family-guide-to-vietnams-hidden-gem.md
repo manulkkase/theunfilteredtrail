@@ -5,8 +5,6 @@ date: 2025-08-22
 category: Beaches, Bays & Islands
 featured_image: https://live.staticflickr.com/4671/28257246209_35e3eb705e.jpg
 ---
-- - -
-
 ### The Starfish Beach Was a Lie: A Real Insider's Guide to Phu Quoc
 
 I remember the disappointment vividly. We were on a big, crowded tour boat in Phu Quoc, heading to the famous Starfish Beach. My Saigonese partner, who had been telling me stories about this magical place, grew quiet as we approached. The beach was packed, the water was murky with boat traffic, and the few sad-looking starfish had clearly been gathered and arranged for tourist photos. Seeing my face fall, my partner pulled me aside, found a local fisherman, and after a short negotiation in Vietnamese, we were speeding away on his small wooden boat.
