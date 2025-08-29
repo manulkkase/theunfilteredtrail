@@ -8,9 +8,9 @@ featured_image: /images/a-guide-to-cherry-blossom-season-in-south-korea-211658.j
 ---
 My Failed Cherry Blossom Date: A Real Insider's Guide to Korea's Most Magical Season
 
-I once made the rookie mistake of trying to impress my Australian partner with a "romantic" date at the Yeouido Cherry Blossom Festival in Seoul. The reality was a nightmare. We were swept up in a slow-moving river of people, a human traffic jam so dense we could barely breathe, let alone admire the flowers. Every photo had hundreds of strangers in it. It was stressful, not magical.
+I once made the rookie mistake of trying to impress my partner with a "romantic" date at the Yeouido Cherry Blossom Festival in Seoul. The reality was a nightmare. We were swept up in a slow-moving river of people, a human traffic jam so dense we could barely breathe, let alone admire the flowers. Every photo had hundreds of strangers in it. It was stressful, not magical.
 
-The next day, determined to show him the real magic of a Korean spring, I took him to my secret spot: the Seoul National Cemetery. The contrast was breathtaking. It was quiet, serene, and respectful. Magnificent weeping cherry trees dropped their petals onto perfectly manicured lawns. We could walk freely, breathe, and actually *see* the blossoms. That's when he understood. The beauty of this season isn't found in the crowds; it's found in the quiet moments.
+The next day, determined to show her the real magic of a Korean spring, I took her to my secret spot: the Seoul National Cemetery. The contrast was breathtaking. It was quiet, serene, and respectful. Magnificent weeping cherry trees dropped their petals onto perfectly manicured lawns. We could walk freely, breathe, and actually *see* the blossoms. That's when she understood. The beauty of this season isn't found in the crowds; it's found in the quiet moments.
 
 - - -
 
