@@ -3,7 +3,7 @@ title: "### The Secret Tracks: Unlocking the Best KTX Day Trips from Seoul 🚄"
 date: 2025-08-29
 category: Budget Hacks & Transport
 permalink: /blog/2025-08-29-211608/
-featured_image: /images/a-guide-to-the-best-ktx-day-trips-from-seoul-211605.jpg
+featured_image: https://live.staticflickr.com/65535/49720865576_bdbd6fa2b8.jpg
 ---
 **How a childhood love for trains turned into my guide for the ultimate day trips from Seoul.**
 
