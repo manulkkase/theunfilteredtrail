@@ -1,9 +1,10 @@
 ---
-title: "### Unveiling the Secrets of the Cu Chi Tunnels: Choose Wisely and Dive Deep into History"
+title: "Unveiling the Secrets of the Cu Chi Tunnels: Choose Wisely and Dive Deep
+  into History"
 date: 2025-08-30
-category: "City Vibes & Night-life"
-permalink: "/blog/2025-08-30-211506/"
-featured_image: "/images/a-guide-to-choosing-a-cu-chi-tunnels-tour-211504.jpg"
+category: City Vibes & Night-life
+permalink: /blog/2025-08-30-211506/
+featured_image: https://live.staticflickr.com/65535/49317940716_eaf05b9c02.jpg
 ---
 
 **Discover how to select the best Cu Chi Tunnels tour from a local's perspective, complete with personal insights and essential booking tips.**
