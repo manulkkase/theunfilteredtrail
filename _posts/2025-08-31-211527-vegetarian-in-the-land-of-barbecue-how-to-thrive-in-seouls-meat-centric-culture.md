@@ -1,9 +1,10 @@
 ---
-title: "### Vegetarian in the Land of Barbecue: How to Thrive in Seoul's Meat-Centric Culture"
+title: "Vegetarian in the Land of Barbecue: How to Thrive in Seoul's
+  Meat-Centric Culture"
 date: 2025-08-31
-category: "Street Food & Night Markets"
-permalink: "/blog/2025-08-31-211527/"
-featured_image: "/images/a-survival-guide-for-vegetarians-in-seoul-211525.jpg"
+category: Street Food & Night Markets
+permalink: /blog/2025-08-31-211527/
+featured_image: https://live.staticflickr.com/65535/52209575915_1e9b68deec.jpg
 ---
 
 **Subtle tricks and treats for the plant-based traveler, from a Seoul-born vegetarian enthusiast**
