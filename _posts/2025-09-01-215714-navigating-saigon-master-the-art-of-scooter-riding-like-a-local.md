@@ -1,8 +1,9 @@
 ---
-title: "### Navigating Saigon: Master the Art of Scooter Riding Like a Local"
+title: "Navigating Saigon: Master the Art of Scooter Riding Like a Local"
 date: 2025-09-01
-category: "Budget Hacks & Transport"
-permalink: "/blog/2025-09-01-215714/"
+category: Budget Hacks & Transport
+permalink: /blog/2025-09-01-215714/
+featured_image: https://live.staticflickr.com/1358/5108560495_114c0f922c.jpg
 ---
 
 #### Uncover my partner's secrets to weaving through the city's vibrant streets on two wheels
