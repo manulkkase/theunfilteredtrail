@@ -1,9 +1,9 @@
 ---
-title: "### Unraveling the Mysteries of Vietnamese Visas: From Application to Arrival 🛂"
+title: "Unraveling the Mysteries of Vietnamese Visas: From Application to Arrival 🛂"
 date: 2025-09-02
-category: "Budget Hacks & Transport"
-permalink: "/blog/2025-09-02-211548/"
-featured_image: "/images/a-comprehensive-guide-to-obtaining-a-vietnamese-visa-for-travelers-211546.jpg"
+category: Budget Hacks & Transport
+permalink: /blog/2025-09-02-211548/
+featured_image: https://live.staticflickr.com/65535/51656356028_38b853fafa.jpg
 ---
 
 *From the bustling streets of Saigon to the quiet hush of Hanoi's temples, here's your personal guide to navigating Vietnam's visa process with ease.*
