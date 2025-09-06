@@ -1,8 +1,10 @@
 ---
-title: "### Unveiling Vietnam: How to Find the Perfect Local Guide for an Unforgettable Journey"
+title: "Unveiling Vietnam: How to Find the Perfect Local Guide for an
+  Unforgettable Journey"
 date: 2025-09-04
-category: "City Vibes & Night-life"
-permalink: "/blog/2025-09-04-211634/"
+category: City Vibes & Night-life
+permalink: /blog/2025-09-04-211634/
+featured_image: https://live.staticflickr.com/3088/3099329135_6d1e9ebda4.jpg
 ---
 
 #### Discover the secrets to hiring a local guide through my own adventures and insider tips
