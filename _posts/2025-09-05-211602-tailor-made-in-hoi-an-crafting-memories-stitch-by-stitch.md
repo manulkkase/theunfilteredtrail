@@ -1,9 +1,9 @@
 ---
-title: "### Tailor-Made in Hoi An: Crafting Memories Stitch by Stitch"
+title: "Tailor-Made in Hoi An: Crafting Memories Stitch by Stitch"
 date: 2025-09-05
-category: "City Vibes & Night-life"
-permalink: "/blog/2025-09-05-211602/"
-featured_image: "/images/a-guide-to-getting-custom-made-clothing-in-hoi-an-211600.jpg"
+category: City Vibes & Night-life
+permalink: /blog/2025-09-05-211602/
+featured_image: https://live.staticflickr.com/3651/5834490167_39e16137b6.jpg
 ---
 
 #### How a Local Artisan Turned Fabric into a Family Heirloom
