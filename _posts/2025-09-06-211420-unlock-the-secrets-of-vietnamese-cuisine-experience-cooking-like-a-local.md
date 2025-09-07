@@ -1,14 +1,13 @@
 ---
-title: "### Unlock the Secrets of Vietnamese Cuisine: Experience Cooking Like a Local"
+title: "Unlock the Secrets of Vietnamese Cuisine: Experience Cooking Like a Local"
 date: 2025-09-06
-category: "Street Food & Night Markets"
-permalink: "/blog/2025-09-06-211420/"
-featured_image: "/images/a-guide-to-participating-in-an-authentic-vietnamese-cooking-class-211418.jpg"
+category: Street Food & Night Markets
+permalink: /blog/2025-09-06-211420/
+featured_image: https://live.staticflickr.com/7677/17405787186_22253f8b63.jpg
 ---
+#### How a bustling market tour and a hidden gem of a cooking class transformed my view of Vietnamese food forever.
 
-#### Subtitle: How a bustling market tour and a hidden gem of a cooking class transformed my view of Vietnamese food forever.
-
----
+- - -
 
 The aroma of fresh herbs, the sizzle of frying spring rolls, and the vibrant chaos of a local market — these are memories etched into my mind from an unforgettable cooking class experience in Saigon. My partner, born and raised in this lively city, had always raved about the depth of Vietnamese cuisine, far beyond the well-loved phở and bánh mì that tourists queue up for. Eager to dive deeper, we decided to sign up for a cooking class that promised not just recipes, but a full immersion into the local food culture.
 
@@ -29,6 +28,7 @@ Nothing quite prepares you for the sensory overload of a Saigon market. During o
 Back at the cooking school, the real magic began. We were tasked with making phở from scratch, which involved toasting and grinding spices, simmering bones for hours, and learning the delicate balance of seasoning. The tactile joy of assembling fresh spring rolls with shrimp and herbs freshly plucked from the market was unmatched. What truly set this class apart was the emphasis on understanding the 'why' behind each step.
 
 **Common Rookie Mistakes to Avoid**:
+
 1. **Overpacking the spring rolls**: Keep your fillings generous but not bulky. Balance is key.
 2. **Rushing the broth**: Good phở broth needs time. Patience yields the best flavor.
 
@@ -42,6 +42,6 @@ Embarking on a cooking class in Saigon isn't just about learning to make a dish.
 
 So, next time you find yourself in Vietnam, skip the standard fare and dive headfirst into the culinary heart of this rich culture. Trust me, your palate (and your cooking repertoire) will thank you for it!
 
----
+- - -
 
-#VietnameseCookingClass #CulinaryTourism #LocalMarketTours #AuthenticCuisine #SaigonFoodExperience #Pho #SpringRolls #LocalIngredients
+\#VietnameseCookingClass #CulinaryTourism #LocalMarketTours #AuthenticCuisine #SaigonFoodExperience #Pho #SpringRolls #LocalIngredients
