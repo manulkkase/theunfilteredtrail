@@ -427,6 +427,7 @@ section {
     text-align: center;
     margin-bottom: 3rem;
     padding: 2rem 0;
+    position: static !important;
 }
 
 .post-meta {
