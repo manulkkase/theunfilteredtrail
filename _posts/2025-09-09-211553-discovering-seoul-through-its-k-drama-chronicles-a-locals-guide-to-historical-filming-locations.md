@@ -1,9 +1,10 @@
 ---
-title: "### Discovering Seoul Through Its K-Drama Chronicles: A Local’s Guide to Historical Filming Locations"
+title: "Discovering Seoul Through Its K-Drama Chronicles: A Local’s Guide to
+  Historical Filming Locations"
 date: 2025-09-09
-category: "K-Culture & Palaces"
-permalink: "/blog/2025-09-09-211553/"
-featured_image: "/images/a-guide-to-visiting-the-beautiful-historical-filming-locations-from-famous-k-dramas-211550.jpg"
+category: K-Culture & Palaces
+permalink: /blog/2025-09-09-211553/
+featured_image: https://live.staticflickr.com/7454/9317513727_e54ab210c6.jpg
 ---
 
 **Uncover the charm of Seoul’s royal palaces and Hanok villages just like they appear in your favorite K-dramas, with real memories and insider tips.**
