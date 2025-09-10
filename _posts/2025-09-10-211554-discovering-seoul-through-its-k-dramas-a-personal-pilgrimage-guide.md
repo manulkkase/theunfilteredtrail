@@ -1,9 +1,9 @@
 ---
-title: "### Discovering Seoul Through Its K-Dramas: A Personal Pilgrimage Guide"
+title: "Discovering Seoul Through Its K-Dramas: A Personal Pilgrimage Guide"
 date: 2025-09-10
-category: "K-Culture & Palaces"
-permalink: "/blog/2025-09-10-211554/"
-featured_image: "/images/a-pilgrimage-guide-to-the-iconic-filming-locations-of-modern-k-dramas-211552.jpg"
+category: K-Culture & Palaces
+permalink: /blog/2025-09-10-211554/
+featured_image: https://live.staticflickr.com/579/23771007482_615d5c1071.jpg
 ---
 
 #### Relive the Magic of 'Goblin' and 'Crash Landing on You' with a Local's Touch
