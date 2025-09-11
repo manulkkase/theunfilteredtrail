@@ -50,3 +50,5 @@ timezone: Australia/Sydney
 encoding: utf-8
 safe: false
 # google_analytics: G-7JK6EEQ7ST
+include:
+  - _redirects
