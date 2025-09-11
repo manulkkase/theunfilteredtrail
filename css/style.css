@@ -422,23 +422,31 @@ section {
     color: var(--light);
 }
 
-/* Post Content */
+/* 1. 헤더 위치 강제 고정 */
 .post-header {
+    display: block !important;          /* 블록 요소로 강제 */
+    position: static !important;        /* 위치 고정 (겹침 방지) */
+    background-color: white !important; /* 투명 배경 방지 */
+    margin-bottom: 2rem !important;     /* 이미지와 확실한 간격 확보 */
+    transform: none !important;         /* 모든 변형 효과(움직임) 초기화 */
+}
+
+/* 2. 제목 위치와 색상 강제 고정 */
+.post-header h1.post-title {
     position: static !important;
-    background: none !important;
-    padding-top: 3rem !important;
-    margin-bottom: 2rem !important;
-}
-
-/* 제목 텍스트에 있던 그림자 효과 제거 (흰 배경에서 더 잘보이도록) */
-.post-header h1 {
+    color: #2c3e50 !important;
     text-shadow: none !important;
+    transform: none !important;
 }
 
-/* 이미지가 제목 위로 올라오지 않도록 마진 초기화 */
+/* 3. 대표 이미지 위치 강제 고정 */
 .post-featured-image {
+    display: block !important;
+    position: static !important;
     margin-top: 0 !important;
+    transform: none !important;
 }
+
 .post-meta {
     display: flex;
     justify-content: center;
@@ -1540,22 +1548,4 @@ footer {
     justify-content: space-between;
     gap: 1rem;
     margin-top: 2rem;
-}
-.page-header .page-title {
-    display: none !important;
-}
-
-/* 선택자 2: 포스트 썸네일(대표 이미지) 영역의 제목 */
-.post-thumbnail-header .entry-title {
-    display: none !important;
-}
-
-/* 선택자 3: 콘텐츠 영역 바로 위에 있는 헤더의 제목 */
-.hentry .entry-header {
-	display: none !important;
-}
-
-/* 선택자 4: 'Hero' 이미지 섹션 안의 제목 */
-.hero-header .entry-title {
-    display: none !important;
 }
