@@ -2,7 +2,7 @@
 title: "Embracing the Wind and Waves: An Adventurous Travel Guide to Jeju Island"
 date: 2025-08-23
 category: Beaches, Bays & Islands
-permalink: /blog/2025-08-23-211538/
+permalink: /jeju-island-travel-guide/
 featured_image: https://live.staticflickr.com/2926/14245126395_811c49ac2a.jpg
 ---
 ### My Dad's Jeju Obsession: A Real Insider's Guide to Korea's Island Paradise

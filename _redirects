@@ -1,3 +1,4 @@
+# 기존 URL 구조 변경 (날짜 -> 제목)
 /2025/08/22/title-unveiling-phu-quoc-a-family-guide-to-vietnams-hidden-gem/ /unveiling-phu-quoc-a-family-guide-to-vietnams-hidden-gem/ 301
 /2025/08/21/cherry-blossoms-off-the-beaten-path-experience-spring-in-korea-like-a-local/ /cherry-blossoms-off-the-beaten-path-experience-spring-in-korea-like-a-local/ 301
 /2025/08/20/title-the-art-of-tailoring-in-hoi-an-a-personal-journey-through-fabric-and-scissors/ /the-art-of-tailoring-in-hoi-an-a-personal-journey-through-fabric-and-scissors/ 301
@@ -18,3 +19,26 @@
 /2025/08/10/navigating-saigons-morning-chaos-a-symphony-of-sights-and-sounds/ /navigating-saigons-morning-chaos-a-symphony-of-sights-and-sounds/ 301
 /2025/08/05/aussie-hipsters-guide-to-seongsu-seouls-coolest-neighbourhood-%F0%9F%87%B0%F0%9F%87%B7/ /aussie-hipsters-guide-to-seongsu-seouls-coolest-neighbourhood/ 301
 /2025/08/05/a-vietnamese-caf%C3%A9-is-not-just-a-coffee-shop-what-c%C3%A0-ph%C3%AA-s%E1%BB%AFa-%C4%91%C3%A1-really-means/ /vietnamese-iced-coffee-culture/ 301
+
+# 숫자 기반 URL을 제목 기반으로 변경
+/blog/2025-08-23-211538/ /jeju-island-travel-guide/ 301
+/blog/2025-08-24-211607/ /da-lat-vietnam-highlands-guide/ 301
+/blog/2025-08-25-211721/ /south-korea-2-week-itinerary/ 301
+/blog/2025-08-26-211627/ /seoul-winter-survival-guide/ 301
+/blog/2025-08-27-211657/ /vietnam-budget-travel-guide/ 301
+/blog/2025-08-28-084234/ /korea-tourist-sim-card-guide/ 301
+/blog/2025-08-28-211641/ /korean-bbq-experience-guide/ 301
+/blog/2025-08-29-101721/ /saigon-safety-guide-solo-female-traveler/ 301
+/blog/2025-08-29-211608/ /ktx-day-trips-from-seoul/ 301
+/blog/2025-08-30-211506/ /cu-chi-tunnels-tour-guide/ 301
+/blog/2025-08-31-211527/ /seoul-vegetarian-guide/ 301
+/blog/2025-09-01-215714/ /saigon-scooter-rental-guide/ 301
+/blog/2025-09-02-211548/ /vietnam-visa-guide/ 301
+/blog/2025-09-03-211552/ /vietnam-currency-exchange-guide/ 301
+/blog/2025-09-04-211634/ /vietnam-local-guide-tips/ 301
+/blog/2025-09-05-211602/ /hoi-an-tailor-guide/ 301
+/blog/2025-09-06-211420/ /vietnam-cooking-class-guide/ 301
+/blog/2025-09-07-211425/ /vietnam-craft-beer-guide/ 301
+/blog/2025-09-08-211633/ /seoul-kpop-idol-hotspots-guide/ 301
+/blog/2025-09-09-211553/ /seoul-historical-kdrama-filming-locations/ 301
+/blog/2025-09-10-211554/ /seoul-kdrama-pilgrimage-guide/ 301
