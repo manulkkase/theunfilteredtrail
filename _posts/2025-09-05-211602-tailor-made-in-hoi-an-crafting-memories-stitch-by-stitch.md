@@ -2,7 +2,7 @@
 title: "Tailor-Made in Hoi An: Crafting Memories Stitch by Stitch"
 date: 2025-09-05
 category: City Vibes & Night-life
-permalink: /blog/2025-09-05-211602/
+permalink: /hoi-an-tailor-guide/
 featured_image: https://live.staticflickr.com/3651/5834490167_39e16137b6.jpg
 ---
 

@@ -3,7 +3,7 @@ title: "### Stay Connected in Korea: The Ultimate Guide to Getting a Tourist SIM
   Card at Incheon Airport"
 date: 2025-08-28
 category: Budget Hacks & Transport
-permalink: /blog/2025-08-28-084234/
+permalink: /korea-tourist-sim-card-guide/
 featured_image: https://live.staticflickr.com/65535/53538896615_8fb7cc9321.jpg
 ---
 Don't Make This Rookie Mistake at Incheon: Your Insider's Guide to a Korean SIM

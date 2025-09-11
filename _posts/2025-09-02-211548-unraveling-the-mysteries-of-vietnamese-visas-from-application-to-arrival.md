@@ -2,7 +2,7 @@
 title: "Unraveling the Mysteries of Vietnamese Visas: From Application to Arrival 🛂"
 date: 2025-09-02
 category: Budget Hacks & Transport
-permalink: /blog/2025-09-02-211548/
+permalink: /vietnam-visa-guide/
 featured_image: https://live.staticflickr.com/65535/51656356028_38b853fafa.jpg
 ---
 

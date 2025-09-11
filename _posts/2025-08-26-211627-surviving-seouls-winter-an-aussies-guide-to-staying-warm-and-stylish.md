@@ -2,7 +2,7 @@
 title: "### Surviving Seoul's Winter: An Aussie's Guide to Staying Warm and Stylish"
 date: 2025-08-26
 category: City Vibes & Night-life
-permalink: /blog/2025-08-26-211627/
+permalink: /seoul-winter-survival-guide/
 featured_image: https://live.staticflickr.com/150/386248611_f2fda638ca.jpg
 ---
 ### Your Sydney Winter Coat Won't Cut It: An Insider's Guide to Surviving a Korean Winter

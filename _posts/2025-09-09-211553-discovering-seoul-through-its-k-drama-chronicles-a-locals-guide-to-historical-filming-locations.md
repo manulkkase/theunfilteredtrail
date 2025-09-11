@@ -3,7 +3,7 @@ title: "Discovering Seoul Through Its K-Drama Chronicles: A Local’s Guide to
   Historical Filming Locations"
 date: 2025-09-09
 category: K-Culture & Palaces
-permalink: /blog/2025-09-09-211553/
+permalink: /seoul-historical-kdrama-filming-locations/
 featured_image: https://live.staticflickr.com/7454/9317513727_e54ab210c6.jpg
 ---
 

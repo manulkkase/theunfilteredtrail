@@ -2,7 +2,7 @@
 title: "Live Like a K-Pop Star: A Day in Seoul's Idol Hotspots"
 date: 2025-09-08
 category: K-Culture & Palaces
-permalink: /blog/2025-09-08-211633/
+permalink: /seoul-kpop-idol-hotspots-guide/
 featured_image: https://live.staticflickr.com/65535/53894968831_bafbd775bd.jpg
 ---
 #### From my childhood haunts to BTS & BLACKPINK's favorite retreats, join me on a fan's ultimate pilgrimage.

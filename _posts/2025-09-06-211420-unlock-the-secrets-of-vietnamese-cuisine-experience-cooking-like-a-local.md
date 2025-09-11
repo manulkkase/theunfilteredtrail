@@ -2,7 +2,7 @@
 title: "Unlock the Secrets of Vietnamese Cuisine: Experience Cooking Like a Local"
 date: 2025-09-06
 category: Street Food & Night Markets
-permalink: /blog/2025-09-06-211420/
+permalink: /vietnam-cooking-class-guide/
 featured_image: https://live.staticflickr.com/7677/17405787186_22253f8b63.jpg
 ---
 #### How a bustling market tour and a hidden gem of a cooking class transformed my view of Vietnamese food forever.

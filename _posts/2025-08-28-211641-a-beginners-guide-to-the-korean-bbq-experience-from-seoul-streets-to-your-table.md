@@ -3,7 +3,7 @@ title: "### A Beginner's Guide to the Korean BBQ Experience: From Seoul Streets
   to Your Table"
 date: 2025-08-28
 category: K-Culture & Palaces
-permalink: /blog/2025-08-28-211641/
+permalink: /korean-bbq-experience-guide/
 featured_image: /images/a-beginners-guide-to-the-korean-bbq-experience-211639.jpg
 ---
 

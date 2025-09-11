@@ -3,7 +3,7 @@ title: "Unveiling the Secrets of the Cu Chi Tunnels: Choose Wisely and Dive Deep
   into History"
 date: 2025-08-30
 category: City Vibes & Night-life
-permalink: /blog/2025-08-30-211506/
+permalink: /cu-chi-tunnels-tour-guide/
 featured_image: https://live.staticflickr.com/65535/49317940716_eaf05b9c02.jpg
 ---
 

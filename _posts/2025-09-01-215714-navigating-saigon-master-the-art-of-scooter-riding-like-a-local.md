@@ -2,7 +2,7 @@
 title: "Navigating Saigon: Master the Art of Scooter Riding Like a Local"
 date: 2025-09-01
 category: Budget Hacks & Transport
-permalink: /blog/2025-09-01-215714/
+permalink: /saigon-scooter-rental-guide/
 featured_image: https://live.staticflickr.com/1358/5108560495_114c0f922c.jpg
 ---
 

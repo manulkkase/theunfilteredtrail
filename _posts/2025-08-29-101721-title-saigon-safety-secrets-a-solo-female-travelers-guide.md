@@ -2,7 +2,7 @@
 title: "Saigon Safety Secrets: A Solo Female Traveler's Guide"
 date: 2025-08-29
 category: Budget Hacks & Transport
-permalink: /blog/2025-08-29-101721/
+permalink: /saigon-safety-guide-solo-female-traveler/
 featured_image: /images/a-safety-guide-for-solo-female-travellers-in-vietnam-101719.jpg
 ---
 ### How my partner taught me to navigate Vietnam safely and stylishly—from dusk till dawn.

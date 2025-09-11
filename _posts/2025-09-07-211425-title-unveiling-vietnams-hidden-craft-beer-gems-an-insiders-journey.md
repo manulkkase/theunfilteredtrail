@@ -2,7 +2,7 @@
 title: "Unveiling Vietnam's Hidden Craft Beer Gems: An Insider's Journey"
 date: 2025-09-07
 category: City Vibes & Night-life
-permalink: /blog/2025-09-07-211425/
+permalink: /vietnam-craft-beer-guide/
 featured_image: https://live.staticflickr.com/4591/39321998251_60e5299192.jpg
 ---
 ### Follow along as we explore the lesser-known breweries of Vietnam, where unique flavors meet local charm.

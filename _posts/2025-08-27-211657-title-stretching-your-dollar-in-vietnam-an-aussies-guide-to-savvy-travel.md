@@ -2,7 +2,7 @@
 title: "Stretching Your Dollar in Vietnam: An Aussie's Guide to Savvy Travel"
 date: 2025-08-27
 category: Budget Hacks & Transport
-permalink: /blog/2025-08-27-211657/
+permalink: /vietnam-budget-travel-guide/
 featured_image: https://live.staticflickr.com/4652/39796547044_fb19d7ca6c.jpg
 ---
 ### How My Saigon Partner Saved Me From Tourist Prices: A Real Guide to Vietnam on a Budget

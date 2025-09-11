@@ -1,8 +1,8 @@
 ---
 title: "### Title: Unraveling Vietnam's Currency Exchange Maze: Tips from an Insider"
 date: 2025-09-03
-category: "Budget Hacks & Transport"
-permalink: "/blog/2025-09-03-211552/"
+category: Budget Hacks & Transport
+permalink: /vietnam-currency-exchange-guide/
 featured_image: "/images/a-guide-to-safely-and-effectively-exchanging-currency-in-vietnam-211550.jpg"
 ---
 

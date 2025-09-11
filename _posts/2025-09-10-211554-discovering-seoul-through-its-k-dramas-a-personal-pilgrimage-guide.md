@@ -2,7 +2,7 @@
 title: "Discovering Seoul Through Its K-Dramas: A Personal Pilgrimage Guide"
 date: 2025-09-10
 category: K-Culture & Palaces
-permalink: /blog/2025-09-10-211554/
+permalink: /seoul-kdrama-pilgrimage-guide/
 featured_image: https://live.staticflickr.com/579/23771007482_615d5c1071.jpg
 ---
 
