@@ -1541,3 +1541,26 @@ footer {
     gap: 1rem;
     margin-top: 2rem;
 }
+/* --- 제목과 이미지 겹침 문제 해결을 위한 코드 --- */
+
+/* 1. 포스트 헤더의 위치를 명확하게 설정합니다. */
+/* 'position: relative'로 설정하여 다른 요소와 겹치지 않도록 하고, */
+/* 배경색을 지정해 이미지가 비치지 않도록 합니다. */
+.post-header {
+    position: relative !important;
+    z-index: 10;
+    background-color: white !important;
+    padding-top: 2rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* 2. 대표 이미지(Featured Image)가 위로 올라오지 않도록 마진을 초기화합니다. */
+.post-featured-image {
+    display: block !important;
+    margin-top: 0 !important;
+}
+
+/* 3. 제목(h1)의 텍스트 그림자를 제거하여 가독성을 높입니다. */
+.post-header h1 {
+    text-shadow: none !important;
+}
