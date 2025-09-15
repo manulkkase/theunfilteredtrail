@@ -7,6 +7,9 @@
 [build.environment]
   RUBY_VERSION = "3.2.0"
   JEKYLL_ENV = "production"
+    
+[build.processing]
+  pretty_urls = true
 
 [context.production.environment]
   JEKYLL_ENV = "production"
