@@ -2,7 +2,7 @@
 title: "Hidden Lenses: Capturing the Heart of Mu Cang Chai"
 date: 2025-09-16
 category: Mountains & Rice Terraces
-permalink: /title-hidden-lenses-capturing-the-heart-of-mu-cang-chai/
+permalink: /hidden-lenses-capturing-the-heart-of-mu-cang-chai/
 featured_image: /images/a-photographers-guide-to-capturing-the-breathtaking-sculpted-landscapes-of-mu-cang-chai-211556.jpg
 ---
 Discover the secrets of photographing Vietnam's terraced rice fields through my family's cherished experiences.
