@@ -2,7 +2,7 @@
 title: "Riding the Wind: Unveiling Northern Vietnam's Ultimate Motorbike Adventure"
 date: 2025-09-15
 category: Mountains & Rice Terraces
-permalink: /title-riding-the-wind-unveiling-northern-vietnams-ultimate-motorbike-adventure/
+permalink: /riding-the-wind-unveiling-northern-vietnams-ultimate-motorbike-adventure/
 featured_image: https://live.staticflickr.com/3581/3792784622_2d669d3746.jpg
 ---
 ### Join me as I recount the thrill and revelations of conquering Vietnam’s most spectacular motorbike loop with local insights and family-friendly tips.
