@@ -2,7 +2,7 @@
 title: "Exploring the Pulse of K-Pop: A Journey Through Iconic Music Video Locations"
 date: 2025-09-12
 category: K-Culture & Palaces
-permalink: /title-exploring-the-pulse-of-k-pop-a-journey-through-iconic-music-video-locations/
+permalink: /exploring-the-pulse-of-k-pop-a-journey-through-iconic-music-video-locations/
 featured_image: https://live.staticflickr.com/7713/17067718987_2c0e3deffe.jpg
 ---
 ### From a Seoul native's nostalgic trips to Yongma Land to discovering Dongdaemun Design Plaza's futuristic scenes—here's how to truly walk in the footsteps of your favorite idols.
