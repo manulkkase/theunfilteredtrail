@@ -1,9 +1,9 @@
 ---
-title: "### Discovering Lan Ha Bay: Ha Long's Quieter Cousin"
+title: "Discovering Lan Ha Bay: Ha Long's Quieter Cousin"
 date: 2025-09-17
-category: "Beaches, Bays & Islands"
-permalink: "/discovering-lan-ha-bay-ha-longs-quieter-cousin/"
-featured_image: "/images/a-guide-to-exploring-lan-ha-bay-ha-longs-stunning-and-crowd-free-sibling-211535.jpg"
+category: Beaches, Bays & Islands
+permalink: /discovering-lan-ha-bay-ha-longs-quieter-cousin/
+featured_image: /images/a-guide-to-exploring-lan-ha-bay-ha-longs-stunning-and-crowd-free-sibling-211535.jpg
 ---
 
 #### Unveil the tranquility and adventure of Vietnam's hidden gem through our family tales and tips.
