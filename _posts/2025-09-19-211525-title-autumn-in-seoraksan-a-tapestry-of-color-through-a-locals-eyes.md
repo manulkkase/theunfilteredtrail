@@ -1,14 +1,13 @@
 ---
-title: "Title: Autumn in Seoraksan: A Tapestry of Color Through a Local's Eyes"
+title: "Autumn in Seoraksan: A Tapestry of Color Through a Local's Eyes"
 date: 2025-09-19
-category: "Mountains & Rice Terraces"
-permalink: "/title-autumn-in-seoraksan-a-tapestry-of-color-through-a-locals-eyes/"
-featured_image: "/images/a-complete-guide-to-hiking-in-seoraksan-national-park-during-its-magnificent-autumn-foliage-season-211523.jpg"
+category: Mountains & Rice Terraces
+permalink: /title-autumn-in-seoraksan-a-tapestry-of-color-through-a-locals-eyes/
+featured_image: https://live.staticflickr.com/65535/48984938751_8a62cc8a4d.jpg
 ---
+Discover the vibrant hues and hidden trails of Seoraksan National Park, guided by childhood memories and family adventures.
 
-Subtitle: Discover the vibrant hues and hidden trails of Seoraksan National Park, guided by childhood memories and family adventures.
-
----
+- - -
 
 Nothing quite compares to my childhood memories of hiking in Seoraksan National Park during the crisp autumn months. I vividly remember one particular October morning when my family and I set out early, the mist still clinging to the mountainside, painting everything with a dewy, silver glow. As the sun rose, it revealed a riot of colors—scarlets, golds, and deep emeralds—that seemed to set the entire mountain ablaze. It was on this trail, with my parents and siblings, that I learned to truly appreciate the beauty of my homeland. Now, with a family of my own, revisiting these trails has become a cherished autumn ritual.
 
@@ -36,6 +35,6 @@ Revisiting Seoraksan each year is not just about reliving memories or creating n
 
 As your insider guide, I encourage you to explore these paths less traveled, to find your own special moments amidst the autumn leaves, and to create memories that you'll carry with you long after you've left the mountain trails.
 
----
+- - -
 
-#SeoraksanNationalPark #AutumnFoliage #KoreanHikingTrails #FamilyTravelTips #SokchoCulinaryGuide
+\#SeoraksanNationalPark #AutumnFoliage #KoreanHikingTrails #FamilyTravelTips #SokchoCulinaryGuide
