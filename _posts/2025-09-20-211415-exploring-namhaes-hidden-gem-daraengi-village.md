@@ -1,9 +1,9 @@
 ---
-title: "### Exploring Namhae's Hidden Gem: Daraengi Village"
+title: "Exploring Namhae's Hidden Gem: Daraengi Village"
 date: 2025-09-20
-category: "Mountains & Rice Terraces"
-permalink: "/exploring-namhaes-hidden-gem-daraengi-village/"
-featured_image: "/images/discovering-the-unique-beauty-of-namhaes-daraengi-village-and-its-seaside-rice-terraces-211413.jpg"
+category: Mountains & Rice Terraces
+permalink: /exploring-namhaes-hidden-gem-daraengi-village/
+featured_image: https://live.staticflickr.com/7114/6981169008_bf8c0dfca6.jpg
 ---
 
 **Unveiling the Charm of Coastal Rice Terraces Through the Eyes of a Local**
