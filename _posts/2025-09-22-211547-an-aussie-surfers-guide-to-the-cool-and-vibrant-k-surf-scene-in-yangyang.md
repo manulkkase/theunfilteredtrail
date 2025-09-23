@@ -1,9 +1,9 @@
 ---
-title: "### An Aussie Surfer's Guide to the Cool and Vibrant K-Surf Scene in Yangyang"
+title: An Aussie Surfer's Guide to the Cool and Vibrant K-Surf Scene in Yangyang
 date: 2025-09-22
-category: "Beaches, Bays & Islands"
-permalink: "/an-aussie-surfers-guide-to-the-cool-and-vibrant-k-surf-scene-in-yangyang/"
-featured_image: "/images/an-aussie-surfers-guide-to-the-cool-and-vibrant-k-surf-scene-in-yangyang-211544.jpg"
+category: Beaches, Bays & Islands
+permalink: /an-aussie-surfers-guide-to-the-cool-and-vibrant-k-surf-scene-in-yangyang/
+featured_image: /images/an-aussie-surfers-guide-to-the-cool-and-vibrant-k-surf-scene-in-yangyang-211544.jpg
 ---
 
 #### Discover the thrills of Korean surfing through an Aussie's eyes, complete with insider tips on the best spots, seasons, and local surf culture.
